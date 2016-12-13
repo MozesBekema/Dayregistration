@@ -2946,7 +2946,7 @@ ol {
     background: 0 0;
     border: none;
     border-radius: 2px;
-    color: #000;
+    color: #ffffff;
     position: relative;
     height: 36px;
     margin: 0;
@@ -3238,24 +3238,24 @@ input.mdl-button[type="submit"] {
 .card-wide > .mdl-card__title {
     color: #fff;
     height: 400px;
-    background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+    background: url('../img/materialCalendar.png') center / cover;
 }
 
 .card-wide > .mdl-card__menu {
     color: #fff;
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (max-width:1024px) {
     .card-wide.mdl-card {
         width: 70%;
     }
 }
-@media screen and (min-width:880px) {
+@media screen and (max-width:880px) {
     .card-wide.mdl-card {
         width: 80%;
     }
 }
-@media screen and (min-width:550px) {
+@media screen and (max-width:550px) {
     .card-wide.mdl-card {
         width: 100%;
     }
@@ -4703,6 +4703,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 .mdl-navigation__link {
     color: #424242;
     text-decoration: none;
+    text-align: center;
     margin: 0;
     font-size: 20px;
     font-weight: 400;
@@ -4827,7 +4828,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     .mdl-layout__drawer>.mdl-layout__title,
     .mdl-layout__drawer>.mdl-layout-title {
         line-height: 56px;
-        padding-left: 16px
+        padding-left: 0px
     }
 }
 
