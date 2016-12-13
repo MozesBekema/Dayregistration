@@ -19,9 +19,14 @@
                         <div class="mdl-card__actions mdl-card--border">
                             <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Get Started</a>
                         </div>
-                        <div class="mdl-card__menu">
-                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"> <i class="material-icons">share</i> </button>
-                        </div>
+                        <a href="index.php">
+                            <div class="mdl-card__menu">
+                                <div id="tt4" class="icon material-icons">share</div>
+                                <div class="mdl-tooltip" for="tt4">
+                                    Share our application<br>via social media
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </main>

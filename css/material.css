@@ -285,7 +285,7 @@ p {
 }
 
 a {
-    color: rgb(68, 138, 255);
+    color: rgb(255, 255, 255);
     font-weight: 500
 }
 
@@ -3353,6 +3353,9 @@ input.mdl-button[type="submit"] {
     right: 16px;
     top: 16px
 }
+.mdl-card__menu .mdl-tooltip {
+    color: #ffffff;
+}
 
 .mdl-checkbox {
     position: relative;
@@ -4877,7 +4880,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .mdl-layout__drawer-button {
     position: absolute;
-    height: 52px;
+    height: 64px;
     width: 52px;
     border: 0;
     background-size: cover;
