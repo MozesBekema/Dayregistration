@@ -1,1 +1,1 @@
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="">Mijn account</button>
+<a class="mdl-navigation__link" href="">Mijn account</a>
