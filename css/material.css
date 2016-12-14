@@ -3238,11 +3238,15 @@ input.mdl-button[type="submit"] {
 .card-wide > .mdl-card__title {
     color: #fff;
     height: 400px;
-    background: url('../img/materialCalendar.png') center / cover;
+    background: url('../img/materialCalendar.png');
+    background-size: cover;
+    background-position:left;
 }
-
-.card-wide > .mdl-card__menu {
-    color: #fff;
+@media screen and (max-width:1225px) {
+    .card-wide > .mdl-card__title {
+        background-position: center;
+        background-image: url(../img/materialCalendar2.png);
+    }
 }
 
 @media screen and (max-width:1024px) {
