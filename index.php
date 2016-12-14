@@ -22,5 +22,6 @@
                 <?php include("inc/register.php");?>
             </div>
         </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-datepicker mdl-js-datepicker></div>
     </body>
 </html>
