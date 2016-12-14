@@ -2970,13 +2970,20 @@ ol {
     line-height: 36px;
     vertical-align: middle
 }
+.buttonBlack {
+    color: #000000;
+    background-color: rgba(0, 0, 0, 0.10);
+}
+.buttonRed:hover {
+    background-color: rgba(201, 0, 0, 0.3) !important;
+}
 
 .mdl-button::-moz-focus-inner {
     border: 0
 }
 
 .mdl-button:hover {
-    background-color: rgba(158, 158, 158, .2)
+    background-color: rgba(158, 158, 158, 0.40);
 }
 
 .mdl-button:focus:not(:active) {
@@ -2984,7 +2991,7 @@ ol {
 }
 
 .mdl-button:active {
-    background-color: rgba(158, 158, 158, .4)
+    background-color: rgba(158, 158, 158, .4);
 }
 
 .mdl-button.mdl-button--colored {
