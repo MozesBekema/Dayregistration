@@ -23,7 +23,7 @@
                 </form>
             </div>
         </dialog>
-        <?php include("dialogReg.php");?>
+        <?php include("dialog.php");?>
         <a href="index.php">
             <div class="mdl-card__menu">
                 <div id="tt4" class="icon material-icons">share</div>
