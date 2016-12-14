@@ -11,7 +11,7 @@
             </header>
             <div class="mdl-layout__drawer"> <span class="mdl-layout-title"><a href="index.php"><img src="img/logo.png"></a>Day Registration</span>
                 <nav class="mdl-navigation mdl-js-ripple-effect">
-                    <?php include("link.php") ?>
+                    <?php include("link.php")?>
                 </nav>
             </div>
 

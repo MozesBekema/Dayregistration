@@ -19,7 +19,7 @@
                     <br>
                     Now, go ahead and click below.
                 </div>
-                <?php include("inc/register.php"); ?>
+                <?php include("inc/register.php");?>
             </div>
         </div>
     </body>
