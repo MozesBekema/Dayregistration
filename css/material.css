@@ -3297,7 +3297,7 @@ input.mdl-button[type="submit"] {
     font-size: 1em;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 100;
-    margin-left: 13%;
+    margin-left: 120px;
 }
 @media screen and (max-width:1100px) {
     .mdl-card__title p {
