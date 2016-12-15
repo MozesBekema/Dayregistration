@@ -3342,9 +3342,9 @@ input.mdl-button[type="submit"] {
     padding-left: 16px;
     padding-right: 16px;
     padding-bottom: 16px;
+    overflow:auto;
     width: 90%;
 }
-
 .mdl-card__supporting-text::-webkit-scrollbar {
     display: none;
 }
