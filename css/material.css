@@ -3244,19 +3244,6 @@ input.mdl-button[type="submit"] {
 .card-wide.mdl-card {
     width: 70%;
 }
-.card-wide > .mdl-card__title {
-    color: #fff;
-    height: 400px;
-    background: url('../img/materialCalendar.png');
-    background-size: cover;
-    background-position:left;
-}
-@media screen and (max-width:1225px) {
-    .card-wide > .mdl-card__title {
-        background-position: center;
-        background-image: url(../img/materialCalendar2.png);
-    }
-}
 
 @media screen and (max-width:1024px) {
     .card-wide.mdl-card {
@@ -3302,9 +3289,21 @@ input.mdl-button[type="submit"] {
     perspective-origin: 165px 56px;
     -webkit-transform-origin: 165px 56px;
     transform-origin: 165px 56px;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
-
+.mdl-card__title p {
+    width: 250px;
+    text-align: center;
+    font-size: 1em;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 100;
+    margin-left: 13%;
+}
+@media screen and (max-width:1100px) {
+    .mdl-card__title p {
+        display: none;
+    }
+}
 .mdl-card__title.mdl-card--border {
     border-bottom: 1px solid rgba(0, 0, 0, .1)
 }
@@ -3339,9 +3338,13 @@ input.mdl-button[type="submit"] {
     font-weight: 400;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     line-height: 18px;
-    padding: 16px;
+    padding-top: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
     width: 90%;
 }
+
 .mdl-card__supporting-text::-webkit-scrollbar {
     display: none;
 }
