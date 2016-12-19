@@ -44,6 +44,6 @@
         <?php
          }else{
              echo "You are logt in";
-             echo "<a href='login.php?action=logout'>Logout</a>";
+             echo "<a href='../index.php?action=logout'>Logout</a>";
          }
              ?>
