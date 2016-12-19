@@ -9,7 +9,7 @@ if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['passwor
     $email = $_POST['email'];
     $roles_id = 2;
 
-    $geruikersnaam = filter_var($username, FILTER_SANITIZE_STRING);
+    $username = filter_var($username, FILTER_SANITIZE_STRING);
     $password = filter_var($password, FILTER_SANITIZE_STRING);
 
     $query = $conn->prepare("INSERT INTO `users`(username, password, email, roles_id) VALUES(:username, :password, :email, :roles_id)");
