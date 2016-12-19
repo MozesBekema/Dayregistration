@@ -6,7 +6,7 @@
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect dialog-button buttonRed">Login</button>
+            <a href="inc/login.php"><button class="mdl-button mdl-js-button mdl-js-ripple-effect dialog-button buttonRed">Login</button></a>
         </nav>
     </div>
 </header>
