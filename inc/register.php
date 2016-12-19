@@ -14,7 +14,7 @@
                         <label class="mdl-textfield__label" for="sample3">Email</label>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text">
+                        <input class="mdl-textfield__input" type="password">
                         <label class="mdl-textfield__label" for="sample3">Password</label>
                     </div>
                     <div class="mdl-dialog__actions">

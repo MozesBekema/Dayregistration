@@ -1,6 +1,6 @@
 <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Day Registration</span>
+        <span class="mdl-layout-title mdl-js-button mdl-js-ripple-effect">Day Registration</span>
         <!-- Title -->
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
