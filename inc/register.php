@@ -36,6 +36,7 @@ if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['passwor
             <div class="mdl-dialog__content">
                 <form action="#" method="post">
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<<<<<<< HEAD
                         <input class="mdl-textfield__input" type="text" name="username">
                         <label class="mdl-textfield__label" for="sample3">Username</label>
                     </div>
@@ -45,6 +46,17 @@ if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['passwor
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="password" name="password">
+=======
+                        <input class="mdl-textfield__input" type="text" required>
+                        <label class="mdl-textfield__label" for="sample3">Username</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="email" required>
+                        <label class="mdl-textfield__label" for="sample3">Email</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="password" required>
+>>>>>>> origin/master
                         <label class="mdl-textfield__label" for="sample3">Password</label>
                     </div>
                     <div class="mdl-dialog__actions">

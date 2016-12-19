@@ -2969,6 +2969,11 @@ ol {
     line-height: 36px;
     vertical-align: middle
 }
+@media screen and (max-width:1024px) {
+    .mdl-button {
+        color: #000000;
+    }
+}
 .buttonRed {
     height: 64px;
 }
