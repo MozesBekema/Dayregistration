@@ -1,5 +1,6 @@
 <?php
-var_dump($_POST);
+//ob_start();
+//var_dump($_POST);
 include("connect.php");
 
 if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['password'])){
@@ -15,6 +16,8 @@ if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['passwor
     $query = $conn->prepare("INSERT INTO `users`(username, password, email, roles_id) VALUES(:username, :password, :email, :roles_id)");
 
     $query->execute(array('username' => $username, 'password' => $password, 'email' => $email, 'roles_id' => $roles_id));
+
+    header('Location: main.php');
 }
 
 ?>
