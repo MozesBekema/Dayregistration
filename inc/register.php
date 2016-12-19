@@ -1,5 +1,5 @@
 <?php
-//var_dump($_POST);
+var_dump($_POST);
 include("connect.php");
 
 if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['password'])){
@@ -40,7 +40,7 @@ if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['passwor
                         <label class="mdl-textfield__label" for="sample3">Password</label>
                     </div>
                     <div class="mdl-dialog__actions">
-                        <button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect">Create</button>
+                        <button type="submit" name="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect">Create</button>
                     </div>
                 </form>
             </div>
