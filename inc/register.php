@@ -17,11 +17,13 @@ if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['passwor
 
     $query->execute(array('username' => $username, 'password' => $password, 'email' => $email, 'roles_id' => $roles_id));
 
-    header('Location: main.php');
+
 }
 
 ?>
-
+<?php
+    if(!isset($_POST['submit'])){
+?>
 
 <div class="mdl-card__actions mdl-card--border">
     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect dialog-button" id="dialogReg">Get Started</a>
@@ -29,7 +31,7 @@ if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['passwor
             <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect close"><i class="material-icons">clear</i></button>
             <h4 class="mdl-dialog__title"><img src="img/logo.png">Create account</h4>
             <div class="mdl-dialog__content">
-                <form action="#" method="post">
+                <form action="" method="post">
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" name="username" required>
                         <label class="mdl-textfield__label" for="sample3">Username</label>
@@ -70,3 +72,9 @@ if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['passwor
             </div>
         </a>
 </div>
+<?php
+    }
+    else {
+       header("Location: inc/main.php");
+    }
+?>
