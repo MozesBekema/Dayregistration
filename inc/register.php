@@ -75,6 +75,6 @@ if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['passwor
 <?php
     }
     else {
-       header("Location: inc/main.php");
+       header("Location: main.php");
     }
 ?>
