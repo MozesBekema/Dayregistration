@@ -3748,7 +3748,12 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 .mdl-dialog__title {
     padding: 24px 24px 0;
     margin: 0;
+    text-align: center;
     font-size: 2.1rem
+}
+.mdl-dialog__title img{
+    width: 10%;
+    margin-right: 10px;
 }
 
 .mdl-dialog__actions {
@@ -3804,8 +3809,17 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 }
 
 .mdl-dialog__content {
-    padding: 40px 24px 0px;
-    color: rgba(0, 0, 0, .54)
+    padding: 0px 24px 0px;
+    color: rgba(0, 0, 0, .54);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width:380px) {
+    .mdl-dialog__content {
+        width: 100%;
+    }
 }
 
 .mdl-mega-footer {
@@ -4809,6 +4823,8 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 20px;
     line-height: 64px;
+    padding-left: 5px;
+    padding-right: 5px;
     letter-spacing: .02em;
     font-weight: 400;
     box-sizing: border-box;
@@ -5102,7 +5118,10 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     .mdl-layout--fixed-header>.mdl-layout__header {
         display: -webkit-flex;
         display: -ms-flexbox;
-        display: flex
+        display: flex;
+    }
+    .mdl-layout-title {
+        line-height: 56px;
     }
 }
 
