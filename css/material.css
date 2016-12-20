@@ -2969,13 +2969,12 @@ ol {
     line-height: 36px;
     vertical-align: middle
 }
-@media screen and (max-width:1024px) {
-    .mdl-button {
-        color: #000000;
-    }
-}
 .buttonRed {
     height: 64px;
+}
+.buttonBlack {
+    width: 100%;
+    color: #000000;
 }
 
 .mdl-button::-moz-focus-inner {
@@ -3157,7 +3156,7 @@ input.mdl-button[type="submit"] {
     top: 0;
     width: 100%;
     z-index: 0;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .mdl-button[disabled] .mdl-button__ripple-container .mdl-ripple,
@@ -4809,7 +4808,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     position: relative;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 20px;
-    line-height: 1;
+    line-height: 64px;
     letter-spacing: .02em;
     font-weight: 400;
     box-sizing: border-box;
@@ -4953,7 +4952,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     color: rgb(255, 255, 255);
     z-index: 4;
     margin: 4px 6px;
-    pointer-events: none;
+/*    pointer-events: none;*/
 }
 
 .mdl-layout__drawer-button .material-icons {
@@ -5156,7 +5155,10 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     margin: 0;
     padding: 0 40px 0 80px;
 }
-
+.mdl-layout__header-row a {
+    text-decoration: none;
+    line-height: 64px;
+}
 .mdl-layout--no-drawer-button .mdl-layout__header-row {
     padding-left: 40px
 }
@@ -6745,7 +6747,7 @@ fieldset[disabled] .mdl-switch .mdl-switch__ripple-container .mdl-ripple,
     margin-top: -20px;
 }
 .loginForm {
-    padding-top: 40px;
+    padding-top: 60px;
 }
 .mdl-textfield .mdl-button {
     position: absolute;
