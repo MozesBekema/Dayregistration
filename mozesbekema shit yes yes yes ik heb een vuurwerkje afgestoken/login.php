@@ -8,23 +8,23 @@
         header("Location: login.php");
     }
 
-    if(isset($_POST['submit']) && isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])){
+    if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['password'])){
          
-        $gebruikersnaam = $_POST['gebruikersnaam'];
-        $wachtwoord = $_POST['wachtwoord'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
         
-        $gebruikersnaam = filter_var($gebruikersnaam, FILTER_SANITIZE_STRING);
-        $wachtwoord = filter_var($wachtwoord, FILTER_SANITIZE_STRING);
+        $username = filter_var($username, FILTER_SANITIZE_STRING);
+        $password = filter_var($password, FILTER_SANITIZE_STRING);
         
     
-        $query = $conn->prepare("SELECT COUNT(`id`) FROM `gebruikers` WHERE `gebruikersnaam`= :gebruikersnaam AND `wachtwoord` = :wachtwoord");
-        $query->execute(array('gebruikersnaam'=>$gebruikersnaam, 'wachtwoord'=>$wachtwoord));
+        $query = $conn->prepare("SELECT COUNT(`id`) FROM `users` WHERE `username`= :username AND `password` = :password");
+        $query->execute(array('username'=>$username, 'password'=>$password));
         
         $count = $query->fetchColumn();
         if($count == "1"){
-            $_SESSION['login_user'] = $gebruikersnaam;
+            $_SESSION['login_user'] = $username;
         }else{
-            echo"Verkeerde gebruikersnaam/wachtwoord";
+            echo"Wrong username or password";
         }
     }
 
@@ -45,8 +45,8 @@
          
         ?>
         <form action="" method="POST">
-            <input type="text" name="gebruikersnaam" placeholder="Je gebruikersnaam">
-            <input type="password" name="wachtwoord" placeholder="Je wachtwoord">
+            <input type="text" name="username" placeholder="Je username">
+            <input type="password" name="password" placeholder="Je password">
             <input type="submit" name="submit" value="Login"> 
         </form>
         <?php
