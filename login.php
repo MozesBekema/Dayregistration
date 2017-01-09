@@ -1,5 +1,5 @@
 <?php
-
+session_start();
     include("inc/connect.php");
 
     if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
