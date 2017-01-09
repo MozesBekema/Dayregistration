@@ -1,6 +1,11 @@
 <?php
-session_start();
+
     include("inc/connect.php");
+
+    if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
+        session_destroy();
+        header("Location: login.php");
+    }
 
     if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['password'])){
 
@@ -21,41 +26,34 @@ session_start();
             echo"Wrong username or password";
         }
     }
+
+
 ?>
-<html>
-    <?php
-        include("inc/head.php");
-    ?>
+  <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Login pagina</title>
+    </head>
+
     <body>
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <?php
-                include("inc/loginmenu.php");
-            ?>
-            <div class="mdl-dialog__content"><br/>
-                <h4 class="mdl-dialog__title"><img src="img/logo.png">Create account</h4><br/><br/>
-                <?php
-                    if(!isset($_SESSION['login_user'])){
-                ?>
-                <form action="" method="post">
-                    <div class="mdl-textfield textfieldPadding mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" name="username" required autofocus>
-                        <label class="mdl-textfield__label">Username</label>
-                    </div>
-                    <div class="mdl-textfield textfieldPadding mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="password" name="password" required>
-                        <label class="mdl-textfield__label">Password</label>
-                    </div>
-                    <div class="mdl-dialog__actions">
-                        <button type="submit" name="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect">Login</button>
-                    </div>
-                </form>
-                <?php
-                    }
-                    else{
-                        header('Location: main.php');
-                    }
+        <?php
+         if(!isset($_SESSION['login_user'])){
+
+
+        ?>
+        <form action="" method="POST">
+            <input type="text" name="username" placeholder="Je username">
+            <input type="password" name="password" placeholder="Je password">
+            <input type="submit" name="submit" value="Login">
+        </form>
+        <?php
+         }else{
+              echo "<a href='login.php?action=logout'>Log uit</a>";
+              header('Location: main.php');
+         }
              ?>
-            </div>
-        </div>
     </body>
-</html>
+
+    </html>
