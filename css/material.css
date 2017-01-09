@@ -3749,11 +3749,12 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     padding: 24px 24px 0;
     margin: 0;
     text-align: center;
-    font-size: 2.1rem
+    font-size: 2.1rem;
+    color: rgba(0, 0, 0, 0.54);
 }
 .mdl-dialog__title img{
     width: 10%;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .mdl-dialog__actions {
@@ -4800,6 +4801,10 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     overflow-x: hidden;
     position: relative;
     -webkit-overflow-scrolling: touch
+}
+.logoImg {
+    width: 30px !important;
+    margin-right: 15px;
 }
 
 .mdl-layout.is-small-screen .mdl-layout--large-screen-only {
@@ -6034,10 +6039,13 @@ _:-ms-input-placeholder,
 }
 
 .mdl-snackbar__text {
-    padding: 14px 12px 14px 24px;
+    padding: 14px 0px 14px 0px;
     vertical-align: middle;
     color: #fff;
-    float: left
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .mdl-snackbar__action {
@@ -6061,7 +6069,7 @@ _:-ms-input-placeholder,
     text-align: center;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
-    align-self: center
+    align-self: center;
 }
 
 .mdl-snackbar__action::-moz-focus-inner {

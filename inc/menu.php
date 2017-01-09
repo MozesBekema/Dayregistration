@@ -10,18 +10,23 @@
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
             <?php
-                if(isset($_SESSION['login_user'])){
-
+                if(!isset($_SESSION['login_user'])){
             ?>
             <a href="login.php">
                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect dialog-button buttonRed">Login</button>
             </a>
             <?php
-                }
-                else {
+                }else{
             ?>
             <a href="index.php?action=logout">
                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect dialog-button buttonRed">Logout</button>
+            </a>
+            <?php
+                }
+                if ($_SERVER['REQUEST_URI'] === 'login.php') {
+            ?>
+            <a href="index.php">
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect dialog-button buttonRed">Back</button>
             </a>
             <?php
                 }
@@ -36,8 +41,20 @@
         </a>Day Registration
     </span>
     <nav class="mdl-navigation mdl-js-ripple-effect">
-        <a href="login.php">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect dialog-button buttonBlack">Login</button>
-        </a>
+        <?php
+                if(!isset($_SESSION['login_user'])){
+            ?>
+            <a href="login.php">
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect dialog-button buttonBlack">Login</button>
+            </a>
+            <?php
+                }else{
+            ?>
+            <a href="index.php?action=logout">
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect dialog-button buttonBlack">Logout</button>
+            </a>
+            <?php
+                }
+            ?>
     </nav>
 </div>

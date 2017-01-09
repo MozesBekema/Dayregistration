@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include("inc/logout.php");
 ?>
 <!doctype html>
 <html>
