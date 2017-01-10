@@ -8,9 +8,13 @@
     </head>
     <body>
         <div class="menuBar">
-            <div class="logo"></div>
-            <p class="dayRegistration">Day Registration</p>
-            <button class="buttonRaised">LOGIN</button>
+            <a href="index.php">
+                <div class="logo"></div>
+                <p class="dayRegistration">Day Registration</p>
+            </a>
+            <a href="login.php">
+                <button class="buttonRaised">LOGIN</button>
+            </a>
         </div>
         <div class="headerBackground">
             <div class="materialCalendar shadow shadowBox">
@@ -42,7 +46,6 @@
                 </div>
             </div>
         </div>
-
         <div class="headerBackgroundLighter">
             <div class="wrapperHeader">
                 <div class="container">
