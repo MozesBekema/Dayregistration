@@ -33,11 +33,22 @@
     <html lang="en">
 
     <head>
-        <meta charset="utf-8">
-        <title>Login pagina</title>
+        <title>Dayregistration</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
     <body>
+        <div class="menuBar">
+            <a href="index.php">
+                <div class="logo"></div>
+                <p class="dayRegistration">Day Registration</p>
+            </a>
+            <a href="index.php">
+                <button class="buttonRaised">BACK</button>
+            </a>
+        </div>
         <?php
          if(!isset($_SESSION['login_user'])){
 
