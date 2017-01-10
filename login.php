@@ -29,15 +29,14 @@
 
 
 ?>
-  <!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="en">
 
     <head>
         <title>Dayregistration</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    </head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> </head>
 
     <body>
         <div class="menuBar">
@@ -52,22 +51,26 @@
         <?php
             if(!isset($_SESSION['login_user'])){
         ?>
-        <div class="wrapperLogin">
-            <div class="containerLogin">
-                <form action="" method="POST">
-                    <input type="text" name="username" placeholder="Je username">
-                    <input type="password" name="password" placeholder="Je password">
-                    <input type="submit" name="submit" value="Login">
-                </form>
+            <div class="wrapperLogin">
+                <div class="containerLogin">
+                    <form action="" method="POST">
+                        <div class="group">
+                            <input type="text" required> <span class="highlight"></span> <span class="bar"></span>
+                            <label>Name</label>
+                        </div>
+                        <div class="group">
+                            <input type="text" required> <span class="highlight"></span> <span class="bar"></span>
+                            <label>Email</label>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
-        <?php
+            <?php
             }
             else {
               echo "<a href='login.php?action=logout'>Log uit</a>";
               header('Location: main.php');
             }
-             ?>
-    </body>
+             ?> </body>
 
     </html>

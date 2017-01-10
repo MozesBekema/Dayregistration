@@ -91,7 +91,12 @@
                         <div class="timerRight"></div>
                         <div class="digitalClock">
                             <div class="digitalClockLighter">
-                                <p>10:08</p>
+                                <p>
+                                    <?php
+                                        $date = date("M d");
+                                        echo $date;
+                                    ?>
+                                </p>
                             </div>
                         </div>
                     </div>
