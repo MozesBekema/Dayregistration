@@ -52,13 +52,18 @@
         <?php
             if(!isset($_SESSION['login_user'])){
         ?>
-        <form action="" method="POST">
-            <input type="text" name="username" placeholder="Je username">
-            <input type="password" name="password" placeholder="Je password">
-            <input type="submit" name="submit" value="Login">
-        </form>
+        <div class="wrapperLogin">
+            <div class="containerLogin">
+                <form action="" method="POST">
+                    <input type="text" name="username" placeholder="Je username">
+                    <input type="password" name="password" placeholder="Je password">
+                    <input type="submit" name="submit" value="Login">
+                </form>
+            </div>
+        </div>
         <?php
-            }else{
+            }
+            else {
               echo "<a href='login.php?action=logout'>Log uit</a>";
               header('Location: main.php');
             }
