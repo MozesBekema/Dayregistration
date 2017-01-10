@@ -97,7 +97,9 @@
                     </div>
                 </div>
                 <div class="getStarted">
-                    <button>GET STARTED</button>
+                    <a href="inc/registratie.php">
+                        <button>GET STARTED</button>
+                    </a>
                 </div>
             </div>
         </div>

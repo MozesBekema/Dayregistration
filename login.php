@@ -50,9 +50,7 @@
             </a>
         </div>
         <?php
-         if(!isset($_SESSION['login_user'])){
-
-
+            if(!isset($_SESSION['login_user'])){
         ?>
         <form action="" method="POST">
             <input type="text" name="username" placeholder="Je username">
@@ -60,10 +58,10 @@
             <input type="submit" name="submit" value="Login">
         </form>
         <?php
-         }else{
+            }else{
               echo "<a href='login.php?action=logout'>Log uit</a>";
               header('Location: main.php');
-         }
+            }
              ?>
     </body>
 
