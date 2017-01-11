@@ -37,7 +37,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> </head>
-    <body>
+    <body style="background-color:rgb(0, 150, 136);">
         <div class="menuBar">
             <a href="index.php">
                 <div class="logo"></div>
@@ -55,16 +55,32 @@
                 <h1>Login</h1>
                 <form action="" method="POST">
                     <div class="group">
-                        <input type="text" required name="username"> <span class="highlight"></span> <span class="bar"></span>
+                        <input type="text" required name="username">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
                         <label>Name</label>
                     </div>
                     <div class="group">
-                        <input type="password" required name="password" autofocus> <span class="highlight"></span> <span class="bar"></span>
+                        <input type="password" required name="password" autofocus>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
                         <label>Password</label>
                     </div>
                     <button type="submit" name="submitLogin" class="buttonRaised buttonRaisedLogin">LOGIN</button>
                 </form>
             </div>
+        </div>
+        <div class="headerBackgroundGradient">
+<div id="clouds">
+	<div class="cloud x1"></div>
+	<!-- Time for multiple clouds to dance around -->
+	<div class="cloud x2"></div>
+	<div class="cloud x3"></div>
+	<div class="cloud x4"></div>
+	<div class="cloud x5"></div>
+</div>
+<!-- Thats the markup! -->
+<!-- That looks cool. We are done!! -->
         </div>
         <?php
             }

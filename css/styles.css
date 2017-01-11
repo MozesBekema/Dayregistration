@@ -67,10 +67,12 @@ button {
     border-radius: 2px;
     cursor: pointer;
 }
+
 .buttonRaisedLogin {
     margin-top: -10px;
     margin-right: -25zpx;
 }
+
 .buttonRaised:active {
     background-color: rgb(255, 133, 94);
     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
@@ -96,6 +98,140 @@ button {
     position: relative;
 }
 
+.headerBackgroundGradient {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009688+0,adccc8+100 */
+    background: rgb(0,150,136); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(0,150,136,1) 0%, rgba(173,204,200,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,150,136,1) 0%,rgba(173,204,200,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,150,136,1) 0%,rgba(173,204,200,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', endColorstr='#adccc8',GradientType=0 ); /* IE6-9 */
+    width: 100%;
+    height: 510px;
+    bottom: 0;
+}
+/*Lets start with the cloud formation rather*/
+
+/*The container will also serve as the SKY*/
+
+*{ margin: 0; padding: 0;}
+
+
+#clouds{
+	padding: 100px 0;
+	background: transparent;
+    margin-top: 120px;
+
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+	width: 200px; height: 60px;
+	background: #fff;
+
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+
+	position: relative;
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute;
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+	-webkit-animation: moveclouds 15s linear infinite;
+	-moz-animation: moveclouds 15s linear infinite;
+	-o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+	left: 200px;
+
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 0.6; /*opacity proportional to the size*/
+
+	/*Speed will also be proportional to the size and opacity*/
+	/*More the speed. Less the time in 's' = seconds*/
+	-webkit-animation: moveclouds 25s linear infinite;
+	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+	left: -250px; top: -200px;
+
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+	left: 470px; top: -250px;
+
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75; /*opacity proportional to the size*/
+
+	-webkit-animation: moveclouds 18s linear infinite;
+	-moz-animation: moveclouds 18s linear infinite;
+	-o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+	left: -150px; top: -150px;
+
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+
+
 .wrapper {
     float: left;
     width: 33.333333%;
@@ -116,6 +252,7 @@ button {
     padding: 1px 40px 40px 40px;
     text-align: center;
     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
+    background-color: #ffffff;
 }
 
 .group {
@@ -134,6 +271,7 @@ input {
     border: none;
     border-bottom: 1px solid #757575;
 }
+
 @media only screen and (max-width: 800px) {
     input {
         width: 90%;
@@ -142,11 +280,13 @@ input {
         width: 100%;
         padding: 1px 10px 40px 0px;
     }
-
 }
+
 input:focus {
     outline: none;
 }
+
+
 /* LABEL ======================================= */
 
 label {
@@ -415,23 +555,26 @@ input:focus ~ .highlight {
     margin-top: -14px;
     margin-left: 35px;
 }
+
 .shadowBox {
     z-index: 0;
     width: 164px;
     height: 229px;
     background: #fff;
 }
+
 @media only screen and (max-width: 1000px) {
-    .shadow::before, .shadow::after {
+    .shadow::before,
+    .shadow::after {
         display: none;
     }
     .materialCalendar {
         box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
     }
 }
+
 .shadow {
     position: relative;
-
 }
 
 .shadow::before,
@@ -697,4 +840,3 @@ input:focus ~ .highlight {
 ::-webkit-scrollbar-thumb:active {
     background: #8b8b8b;
 }
-
