@@ -67,7 +67,10 @@ button {
     border-radius: 2px;
     cursor: pointer;
 }
-
+.buttonRaisedLogin {
+    margin-top: -10px;
+    margin-right: -25zpx;
+}
 .buttonRaised:active {
     background-color: rgb(255, 133, 94);
     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
@@ -617,8 +620,8 @@ input:focus ~ .highlight {
 }
 
 .digitalClock:active {
-    box-shadow: 0px -8px 14px 0px rgba(0, 0, 0, 0.42);
-    background-color: #088bd1;
+    box-shadow: 0px -8px 10px 0px rgba(0, 0, 0, 0.42);
+    background-color: #0192e0;
 }
 
 .digitalClockLighter p {
@@ -694,3 +697,4 @@ input:focus ~ .highlight {
 ::-webkit-scrollbar-thumb:active {
     background: #8b8b8b;
 }
+

@@ -7,7 +7,7 @@
         header("Location: login.php");
     }
 
-    if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['password'])){
+    if(isset($_POST['submitLogin']) && isset($_POST['username']) && isset($_POST['password'])){
 
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -31,15 +31,12 @@
 ?>
     <!DOCTYPE html>
     <html lang="en">
-
     <head>
         <title>Dayregistration</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-    </head>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> </head>
     <body>
         <div class="menuBar">
             <a href="index.php">
@@ -53,27 +50,28 @@
         <?php
             if(!isset($_SESSION['login_user'])){
         ?>
-            <div class="wrapperLogin">
-                <div class="containerLogin">
-                    <h1>Login</h1>
-                    <form action="" method="POST">
-                        <div class="group">
-                            <input type="text" required> <span class="highlight"></span> <span class="bar"></span>
-                            <label>Name</label>
-                        </div>
-                        <div class="group">
-                            <input type="text" required> <span class="highlight"></span> <span class="bar"></span>
-                            <label>Email</label>
-                        </div>
-                    </form>
-                </div>
+        <div class="wrapperLogin">
+            <div class="containerLogin">
+                <h1>Login</h1>
+                <form action="" method="POST">
+                    <div class="group">
+                        <input type="text" required name="username"> <span class="highlight"></span> <span class="bar"></span>
+                        <label>Name</label>
+                    </div>
+                    <div class="group">
+                        <input type="password" required name="password" autofocus> <span class="highlight"></span> <span class="bar"></span>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" name="submitLogin" class="buttonRaised buttonRaisedLogin">LOGIN</button>
+                </form>
             </div>
-            <?php
+        </div>
+        <?php
             }
             else {
-              echo "<a href='login.php?action=logout'>Log uit</a>";
-              header('Location: main.php');
+                header('Location: main.php');
             }
-             ?> </body>
+        ?>
+    </body>
 
     </html>
