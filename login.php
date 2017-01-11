@@ -37,7 +37,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> </head>
-    <body style="background-color:rgb(0, 150, 136);">
+    <body style="background-color:rgba(173,204,200,1);">
         <div class="menuBar">
             <a href="index.php">
                 <div class="logo"></div>
@@ -50,24 +50,26 @@
         <?php
             if(!isset($_SESSION['login_user'])){
         ?>
-        <div class="wrapperLogin">
-            <div class="containerLogin">
-                <h1>Login</h1>
-                <form action="" method="POST">
-                    <div class="group">
-                        <input type="text" required name="username">
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>Name</label>
-                    </div>
-                    <div class="group">
-                        <input type="password" required name="password" autofocus>
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>Password</label>
-                    </div>
-                    <button type="submit" name="submitLogin" class="buttonRaised buttonRaisedLogin">LOGIN</button>
-                </form>
+        <div class="headerBackgroundLogin">
+            <div class="wrapperLogin">
+                <div class="containerLogin">
+                    <h1>Login</h1>
+                    <form action="" method="POST">
+                        <div class="group">
+                            <input type="text" required name="username" autofocus>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Name</label>
+                        </div>
+                        <div class="group">
+                            <input type="password" required name="password">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Password</label>
+                        </div>
+                        <button type="submit" name="submitLogin" class="buttonRaised buttonRaisedLogin">LOGIN</button>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="headerBackgroundGradient">
