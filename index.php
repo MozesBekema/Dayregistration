@@ -1,3 +1,7 @@
+<?php
+    include("inc/connect.php");
+?>
+
 <!doctype html>
 <html>
     <head>
@@ -19,15 +23,69 @@
             <a href="index.php">
                 <p class="dayRegistration">Day Registration</p>
             </a>
+            <?php
+                if(!isset($_SESSION['login_user'])){
+            ?>
             <a href="login.php">
                 <button class="buttonRaised">LOGIN</button>
             </a>
+            <?php
+                }
+                else {
+            ?>
+            <a href="index.php?action=logout">
+                <button class="buttonRaised">LOGOUT</button>
+            </a>
+            <?php
+                }
+                if(!isset($_SESSION['login_user'])){
+            ?>
+            <a href="register.php">
+                <button class="buttonRaised">REGISTER</button>
+            </a>
+            <?php
+                }
+                else {
+            ?>
+            <a href="main.php">
+                <button class="buttonRaised">PROFILE</button>
+            </a>
+            <?php
+                }
+            ?>
             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
-                <a href="login.php"><li class="mdl-menu__item">LOGIN</li></a>
-                <a href="register.php"><li class="mdl-menu__item">REGISTER</li></a>
+                <?php
+                    if(!isset($_SESSION['login_user'])){
+                ?>
+                <a href="login.php">
+                    <li class="mdl-menu__item">LOGIN</li>
+                </a>
+                <?php
+                    }
+                    else {
+                ?>
+                <a href="index.php?action=logout">
+                    <li class="mdl-menu__item">LOGOUT</li>
+                </a>
+                <?php
+                    }
+                    if(!isset($_SESSION['login_user'])){
+                ?>
+                <a href="register.php">
+                    <li class="mdl-menu__item">REGISTER</li>
+                </a>
+                <?php
+                    }
+                    else {
+                ?>
+                <a href="main.php">
+                    <li class="mdl-menu__item">PROFILE</li>
+                </a>
+                <?php
+                    }
+                ?>
             </ul>
         </div>
-
         <div class="headerBackground">
             <div class="materialCalendar shadow shadowBox">
                 <div class="topRowCalendar">
@@ -42,17 +100,17 @@
                     </div>
                 </div>
                 <div class="selectionsCalendar">
-                    <i class="material-icons">check</i>
+                    <i class="material-icons">&#xE5CA;</i>
                     <div class="lineLong"></div>
                     <div class="lineShort"></div>
                 </div>
                 <div class="selectionsCalendar">
-                    <i class="material-icons">check</i>
+                    <i class="material-icons">&#xE5CA;</i>
                     <div class="lineLong"></div>
                     <div class="lineShort"></div>
                 </div>
                 <div class="selectionsCalendar">
-                    <i class="material-icons">check</i>
+                    <i class="material-icons">&#xE5CA;</i>
                     <div class="lineLong"></div>
                     <div class="lineShort"></div>
                 </div>
@@ -114,7 +172,7 @@
                     </div>
                 </div>
                 <div class="getStarted">
-                    <a href="inc/registratie.php">
+                    <a href="register.php">
                         <button>GET STARTED</button>
                     </a>
                 </div>

@@ -26,67 +26,87 @@
             echo"Wrong username or password";
         }
     }
+    if(!isset($_SESSION['login_user'])){}
+    else {
+        header("Location: main.php");
+    }
 
 
 ?>
     <!DOCTYPE html>
     <html lang="en">
-    <head>
-        <title>Dayregistration</title>
-        <link href="css/styles.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> </head>
-    <body style="background-color:rgba(173,204,200,1);">
-        <div class="menuBar">
-            <a href="index.php">
-                <div class="logo"></div>
-                <p class="dayRegistration">Day Registration</p>
-            </a>
-            <a href="index.php">
-                <button class="buttonRaised">BACK</button>
-            </a>
-        </div>
-        <?php
-            if(!isset($_SESSION['login_user'])){
-        ?>
-        <div class="headerBackgroundLogin">
-            <div class="wrapperLogin">
-                <div class="containerLogin">
-                    <h1>Login</h1>
-                    <form action="" method="POST">
-                        <div class="group">
-                            <input type="text" required name="username" autofocus>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Name</label>
-                        </div>
-                        <div class="group">
-                            <input type="password" required name="password">
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Password</label>
-                        </div>
-                        <button type="submit" name="submitLogin" class="buttonRaised buttonRaisedLogin">LOGIN</button>
-                    </form>
+        <head>
+            <title>Dayregistration</title>
+            <link href="css/styles.css" rel="stylesheet" type="text/css">
+            <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" href="css/material.css">
+            <script src="css/material.js"></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+        </head>
+        <body class="logRegBackground">
+            <div class="menuBar">
+                <div class="logo">
+                    <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                    </button>
+                </div>
+                <a href="index.php">
+                    <p class="dayRegistration">Day Registration</p>
+                </a>
+                <a href="index.php">
+                    <button class="buttonRaised">BACK</button>
+                </a>
+                <a href="register.php">
+                    <button class="buttonRaised">REGISTER</button>
+                </a>
+                <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
+                    <a href="index.php">
+                        <li class="mdl-menu__item">BACK</li>
+                    </a>
+                    <a href="register.php">
+                        <li class="mdl-menu__item">REGISTER</li>
+                    </a>
+                </ul>
+            </div>
+            <?php
+                if(!isset($_SESSION['login_user'])){
+            ?>
+            <div class="headerBackgroundLogin">
+                <div class="wrapperLogin">
+                    <div class="containerLogin">
+                        <h1>Login</h1>
+                        <form action="" method="POST">
+                            <div class="group">
+                                <input type="text" required name="username" autofocus>
+                                <span class="bar"></span>
+                                <label>Name</label>
+                            </div>
+                            <div class="group">
+                                <input type="password" required name="password">
+                                <span class="bar"></span>
+                                <label>Password</label>
+                            </div>
+                            <button type="submit" name="submitLogin" class="buttonRaised buttonRaisedLogin">LOGIN</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="headerBackgroundGradient">
-            <div id="clouds">
-                <div class="cloud x1"></div>
-                <div class="cloud x2"></div>
-                <div class="cloud x3"></div>
-                <div class="cloud x4"></div>
-                <div class="cloud x5"></div>
+            <div class="headerBackgroundGradient">
+                <div id="clouds">
+                    <div class="cloud x1"></div>
+                    <div class="cloud x2"></div>
+                    <div class="cloud x3"></div>
+                    <div class="cloud x4"></div>
+                    <div class="cloud x5"></div>
+                </div>
             </div>
-        </div>
-        <?php
-            }
-            else {
-                header('Location: main.php');
-            }
-        ?>
-    </body>
+            <?php
+                }
+                else {
+                    header('Location: main.php');
+                }
+            ?>
+        </body>
 
     </html>
