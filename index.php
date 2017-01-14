@@ -1,12 +1,13 @@
 <?php
     include("inc/connect.php");
+    include("inc/random.php");
 ?>
 
 <!doctype html>
 <html>
     <head>
         <title>Dayregistration</title>
-        <link href="css/styles.scss" rel="stylesheet" type="text/css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/material.css">
@@ -100,7 +101,7 @@
                     </div>
                 </div>
                 <div class="selectionsCalendar">
-                    <i class="material-icons">&#xE5CA;</i>
+                    <i class="material-icons">&#xE5CA;</i></a>
                     <div class="lineLong"></div>
                     <div class="lineShort"></div>
                 </div>
@@ -120,7 +121,7 @@
             <div class="wrapperHeader">
                 <div class="container">
                     <div class="fabButton">
-                        <i class="material-icons">access_time</i>
+                        <a href="register.php"><i class="material-icons">access_time</i></a>
                     </div>
                     <h1>Safe time</h1>
                     <p>Don’t worry about the hours you’ve worked, set the time registration on automatic and make adjustments later on.</p>
@@ -129,7 +130,7 @@
             <div class="wrapperHeader">
                 <div class="container">
                     <div class="fabButton">
-                        <i class="material-icons">phone_iphone</i>
+                        <a href="register.php"><i class="material-icons">phone_iphone</i></a>
                     </div>
                     <h1>On the go?</h1>
                     <p>Day Registration is a fully functional web application that is user friendly on all devices.</p>
@@ -138,7 +139,7 @@
             <div class="wrapperHeader">
                 <div class="container">
                     <div class="fabButton">
-                        <i class="material-icons">brush</i>
+                        <a href="register.php"><i class="material-icons">brush</i></a>
                     </div>
                     <h1>Customize</h1>
                     <p>We think the material design is already very beautiful but you can customize a lot to your own taste if you like.</p>
@@ -159,8 +160,8 @@
                         <div class="timerTop"></div>
                         <div class="timerLeft"></div>
                         <div class="timerRight"></div>
-                        <div class="digitalClock">
-                            <div class="digitalClockLighter">
+                        <div class="calendar">
+                            <div class="calendarLighter">
                                 <p>
                                     <?php
                                         $date = date("M d");

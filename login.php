@@ -1,6 +1,7 @@
 <?php
 
     include("inc/connect.php");
+    include("inc/random.php");
 
     if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
         session_destroy();
@@ -37,7 +38,7 @@
     <html lang="en">
         <head>
             <title>Dayregistration</title>
-            <link href="css/styles.scss" rel="stylesheet" type="text/css">
+            <link href="css/styles.css" rel="stylesheet" type="text/css">
             <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <link rel="stylesheet" href="css/material.css">
