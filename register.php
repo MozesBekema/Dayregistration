@@ -81,7 +81,7 @@ if(!isset($_SESSION['login_user'])){}
                             <span class="bar"></span>
                             <label for="txt_password">Password</label>
                         </div>
-                        <button type="submit" name="submit" class="buttonRaised buttonRaisedLogin">LOGIN</button>
+                        <button type="submit" name="submit" class="buttonRaisedLogin">LOGIN</button>
                     </form>
                 </div>
             </div>

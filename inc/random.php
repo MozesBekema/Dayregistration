@@ -47,7 +47,20 @@
 
         .buttonRaisedLogin {
             background-color: <?php echo $selectedColor; ?>;
-            box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.32);
+            box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
+            font-weight: bold;
+            float: right;
+            margin-right: 0px;
+            filter: brightness(120%);
+            margin-top: -10px;
+            color: #ffffff;
+            width: 90px;
+            height: 36px;
+            z-index: 62;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+            border-radius: 2px;
+            cursor: pointer;
         }
 
         .buttonRaised {

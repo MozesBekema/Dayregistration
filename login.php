@@ -88,7 +88,7 @@
                                 <span class="bar"></span>
                                 <label>Password</label>
                             </div>
-                            <button type="submit" name="submitLogin" class="buttonRaised buttonRaisedLogin">LOGIN</button>
+                            <button type="submit" name="submitLogin" class="buttonRaisedLogin">LOGIN</button>
                         </form>
                     </div>
                 </div>
