@@ -39,7 +39,9 @@
                 </a>
             </ul>
         </div>
-        <div class="chart" id="graph" data-percent="88"></div>
+        <div class="addDay">
+            <button class="addButton">+</button>
+        </div>
     </body>
 
     </html>
