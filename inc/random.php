@@ -43,13 +43,17 @@
             filter: brightness(140%);
             box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
         }
-
+@media only screen and (max-width: 800px) {
+    .buttonRaisedLogin {
+        margin-right: 13px !important;
+    }
+}
         .buttonRaisedLogin {
             background-color: <?php echo $selectedColor; ?>;
             box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
             font-weight: bold;
             float: right;
-            margin-right: 0px;
+            margin-right: -25px;
             filter: brightness(120%);
             margin-top: -10px;
             color: #ffffff;

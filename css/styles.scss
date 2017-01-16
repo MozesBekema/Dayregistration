@@ -18,11 +18,12 @@ $black: #000000;
 $boxshadowLight: 0px 2px 10px 0px rgba(0, 0, 0, 0.32);
 $boxshadowMedium: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
 /*----------Center-------------*/
-body {
+html, body {
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     background-color: #ffffff;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 }
 p {
     margin: 0 auto;
@@ -154,6 +155,7 @@ button {
 }
 .logRegBackground {
     background-color:$grey;
+    overflow: hidden;
 }
 .mainBackground {
     background-color:$greenblue;
@@ -539,7 +541,11 @@ input:focus ~ .highlight {
     width: 100%;
     background-color: $greenblue;
 }
-
+@media only screen and (max-width: 800px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
 .orangeFirstHalf {
     background-color: $orange;
     width: 0;
@@ -778,7 +784,6 @@ input:focus ~ .highlight {
     -webkit-border-radius: 200px;
     position: relative;
     box-shadow: $boxshadowMedium;
-    overflow-x: hidden;
 }
 
 .cloud:before,
