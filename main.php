@@ -61,37 +61,46 @@ $days->execute(array('username'=>$username));
                 </a>
             </ul>
         </div>
-        <div class="add">
-            <form method="post" action="">
-                <button class="addButton" name="addButton" type="submit">+</button>
-                <button class="minusButton" name="minusButton" type="submit" >-</button>
-            </form>
+        <div class="containerBottom">
+            <h1>Progress</h1>
+            <div class="add">
+                <form method="post" action="">
+                    <button class="addButton" name="addButton" type="submit"><i class="material-icons">exposure_plus_1</i></button>
+                    <button class="minusButton" name="minusButton" type="submit" ><i class="material-icons">exposure_neg_1</i></button>
+                </form>
+            </div>
+            <?php
+             foreach($days as $row){
+            ?>
+            <div id="progress">
+                <div class="progressResult">
+                    <?php
+                        $percentage = $row['days_worked'] / $stageDays * 100;
+                        echo number_format((float)$percentage, 2, '.', '') . "%" ;
+                    ?>
+                    <div class="progress">
+                        <div class="determinate" style="width: <?php echo number_format((float)$percentage, 2, '.', ''); ?>%"></div>
+                    </div>
+                </div>
+                <div class="progressCurrent">
+                    <?php
+                        echo $row['days_worked'];
+                    ?>
+                    <div class="progress">
+                        <div class="determinate" style="width: <?php echo $row['days_worked']; ?>"></div>
+                    </div>
+                </div>
+                <div class="progressDays">
+                     <?php
+                        $daysLeft = $stageDays  -  $row['days_worked'] ;
+                        echo $daysLeft;
+                    ?>
+                </div>
+            </div>
+            <?php
+             }
+            ?>
         </div>
-        <?php
-         foreach($days as $row){
-        ?>
-        <div id="progress">
-            <div class="progressResult">
-                 <?php
-                    $percentage = $row['days_worked'] / $stageDays * 100;
-                    echo $percentage . "%" ;
-                ?>
-            </div>
-            <div class="progressCurrent">
-                 <?php
-                    echo $row['days_worked'];
-                ?>
-            </div>
-            <div class="progressDays">
-                 <?php
-                    $daysLeft = $stageDays  -  $row['days_worked'] ;
-                    echo $daysLeft;
-                ?>
-            </div>
-        </div>
-        <?php
-         }
-        ?>
 
 
     </body>

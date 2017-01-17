@@ -1,24 +1,25 @@
 /*--------Colors----------*/
 /*--------Box shadows----------*/
 /*----------Center-------------*/
-/* line 21, C:/xampp/htdocs/dayregistration/css/styles.scss */
-html, body {
+/* line 26, C:/xampp/htdocs/dayregistration/css/styles.scss */
+html,
+body {
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden !important;
   background-color: #ffffff;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 
-/* line 28, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 35, C:/xampp/htdocs/dayregistration/css/styles.scss */
 p {
   margin: 0 auto; }
 
-/* line 31, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 39, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .ripple {
   position: relative;
   overflow: hidden; }
 
-/* line 36, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 44, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .ripple:after {
   content: "";
   display: block;
@@ -35,26 +36,26 @@ p {
   opacity: 0;
   transition: transform .5s, opacity 1s; }
 
-/* line 53, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 61, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .ripple:active:after {
   transform: scale(0, 0);
   opacity: .2;
   transition: 0s; }
 
-/* line 58, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 67, C:/xampp/htdocs/dayregistration/css/styles.scss */
 i {
   color: #ffffff; }
 
-/* line 61, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 71, C:/xampp/htdocs/dayregistration/css/styles.scss */
 a {
   text-decoration: none; }
 
-/* line 64, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 75, C:/xampp/htdocs/dayregistration/css/styles.scss */
 button {
   outline: 0;
   border: none; }
 
-/* line 68, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 80, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .menuBar {
   background-color: #ff5722;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.32);
@@ -65,7 +66,7 @@ button {
   height: 64px;
   z-index: 999999; }
 
-/* line 79, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 90, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .fabButton {
   background-color: #ff5722;
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
@@ -87,17 +88,17 @@ button {
   -ms-user-select: none;
   user-select: none; }
 
-/* line 101, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 112, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .fabButton:active {
   filter: brightness(140%);
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32); }
 
 @media only screen and (max-width: 800px) {
-  /* line 106, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 118, C:/xampp/htdocs/dayregistration/css/styles.scss */
   .buttonRaisedLogin {
     margin-right: 13px !important; } }
 
-/* line 110, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 123, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .buttonRaisedLogin {
   background-color: #ff5722;
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
@@ -115,7 +116,7 @@ button {
   border-radius: 2px;
   cursor: pointer; }
 
-/* line 128, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 141, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .buttonRaised {
   background-color: #ff5722;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.32);
@@ -133,12 +134,64 @@ button {
   border-radius: 2px;
   cursor: pointer; }
 
-/* line 146, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 159, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .buttonRaised:active {
   filter: brightness(140%);
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32); }
 
-/* line 150, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 163, C:/xampp/htdocs/dayregistration/css/styles.scss */
+.addButton {
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.32);
+  margin: 10px;
+  background-color: #ff5722;
+  border-radius: 2px;
+  transition-duration: 0.2s;
+  transition-timing-function: ease; }
+
+/* line 173, C:/xampp/htdocs/dayregistration/css/styles.scss */
+.addButton:active {
+  background-color: #ff7043; }
+
+/* line 176, C:/xampp/htdocs/dayregistration/css/styles.scss */
+.minusButton {
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.32);
+  margin: 10px;
+  background-color: #ff5722;
+  border-radius: 2px;
+  transition-duration: 0.2s;
+  transition-timing-function: ease; }
+
+/* line 186, C:/xampp/htdocs/dayregistration/css/styles.scss */
+.minusButton:active {
+  background-color: #ff7043; }
+
+/* line 189, C:/xampp/htdocs/dayregistration/css/styles.scss */
+.progress {
+  position: relative;
+  height: 6px;
+  display: block;
+  width: 80%;
+  background-color: #adccc8;
+  border-radius: 2px;
+  background-clip: padding-box;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; }
+
+/* line 202, C:/xampp/htdocs/dayregistration/css/styles.scss */
+.progress .determinate {
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  bottom: 0;
+  background-color: #ff5722;
+  transition: width .3s linear; }
+
+/* line 211, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .mdl-navigation__link {
   color: #424242;
   margin: 0;
@@ -148,7 +201,7 @@ button {
   letter-spacing: 0;
   opacity: 0.87; }
 
-/* line 160, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 221, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .logo {
   background-image: url(../img/logo.png);
   background-size: cover;
@@ -161,29 +214,29 @@ button {
   transition-duration: 0.2s;
   transition-timing-function: ease; }
 
-/* line 172, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 234, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .logo button {
   margin-top: 17px;
   display: none; }
 
 @media only screen and (max-width: 800px) {
-  /* line 177, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 240, C:/xampp/htdocs/dayregistration/css/styles.scss */
   .buttonRaised {
     display: none; }
-  /* line 180, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 243, C:/xampp/htdocs/dayregistration/css/styles.scss */
   .logo button {
     display: inline; } }
 
 @media only screen and (max-width: 400px) {
-  /* line 185, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 249, C:/xampp/htdocs/dayregistration/css/styles.scss */
   .dayRegistration {
     margin-left: 20% !important; } }
 
-/* line 189, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 254, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .logo:active {
   filter: brightness(120%); }
 
-/* line 193, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 258, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .dayRegistration {
   font-size: 24px;
   font-weight: medium;
@@ -198,7 +251,7 @@ button {
   z-index: 53;
   margin-left: 80px; }
 
-/* line 208, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 273, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .headerBackground {
   background-color: #009688;
   width: 100%;
@@ -207,7 +260,7 @@ button {
   z-index: -999999;
   padding-top: 130px; }
 
-/* line 217, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 282, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .headerBackgroundLighter {
   background-color: #ffffff;
   width: 100%;
@@ -218,7 +271,7 @@ button {
   box-shadow: 0px -4px 2px 0px rgba(0, 0, 0, 0.18);
   position: relative; }
 
-/* line 228, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 293, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .headerBackgroundLogin {
   background-color: #009688;
   width: 100%;
@@ -228,17 +281,17 @@ button {
   padding-bottom: 40px;
   padding-top: 30px; }
 
-/* line 237, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 303, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .logRegBackground {
   background-color: #adccc8;
   overflow: hidden; }
 
-/* line 241, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 308, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .mainBackground {
   background-color: #009688;
   padding-top: 80px; }
 
-/* line 245, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 313, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .headerBackgroundGradient {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009688+0,adccc8+100 */
   background: #009688;
@@ -250,17 +303,17 @@ button {
   height: 510px;
   bottom: 0; }
 
-/* line 257, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 325, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .wrapper {
   float: left;
   width: 33.333333%; }
 
-/* line 262, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 330, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .wrapperHeader {
   float: left;
   width: 33.333333%; }
 
-/* line 267, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 335, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .wrapperLogin {
   display: block;
   width: 385px;
@@ -273,7 +326,7 @@ button {
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
   background-color: #ffffff; }
 
-/* line 280, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 348, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .group {
   position: relative;
   margin-bottom: 30px;
@@ -281,7 +334,7 @@ button {
   margin-left: 30px;
   margin-right: 30px; }
 
-/* line 288, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 356, C:/xampp/htdocs/dayregistration/css/styles.scss */
 input {
   font-size: 18px;
   padding: 10px 10px 10px 5px;
@@ -291,20 +344,20 @@ input {
   border-bottom: 1px solid #757575; }
 
 @media only screen and (max-width: 800px) {
-  /* line 298, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 366, C:/xampp/htdocs/dayregistration/css/styles.scss */
   input {
     width: 90%; }
-  /* line 301, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 369, C:/xampp/htdocs/dayregistration/css/styles.scss */
   .wrapperLogin {
     width: 100%;
     padding: 1px 10px 40px 0px; } }
 
-/* line 307, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 375, C:/xampp/htdocs/dayregistration/css/styles.scss */
 input:focus {
   outline: none; }
 
 /* LABEL ======================================= */
-/* line 314, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 382, C:/xampp/htdocs/dayregistration/css/styles.scss */
 label {
   color: #999;
   font-size: 18px;
@@ -318,7 +371,7 @@ label {
   -webkit-transition: 0.2s ease all; }
 
 /* active state */
-/* line 330, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 398, C:/xampp/htdocs/dayregistration/css/styles.scss */
 input:focus ~ label,
 input:valid ~ label {
   top: -20px;
@@ -326,13 +379,13 @@ input:valid ~ label {
   color: #5264AE; }
 
 /* BOTTOM BARS ================================= */
-/* line 339, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 408, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .bar {
   position: relative;
   display: block;
   width: 92.5%; }
 
-/* line 345, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 414, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .bar:before,
 .bar:after {
   content: '';
@@ -345,22 +398,22 @@ input:valid ~ label {
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all; }
 
-/* line 358, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 427, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .bar:before {
   left: 50%; }
 
-/* line 362, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 431, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .bar:after {
   right: 50%; }
 
 /* active state */
-/* line 369, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 438, C:/xampp/htdocs/dayregistration/css/styles.scss */
 input:focus ~ .bar:before,
 input:focus ~ .bar:after {
   width: 50%; }
 
 /* HIGHLIGHTER ================================== */
-/* line 377, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 446, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .highlight {
   position: absolute;
   height: 60%;
@@ -371,7 +424,7 @@ input:focus ~ .bar:after {
   opacity: 0.5; }
 
 /* active state */
-/* line 390, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 459, C:/xampp/htdocs/dayregistration/css/styles.scss */
 input:focus ~ .highlight {
   -webkit-animation: inputHighlighter 0.3s ease;
   -moz-animation: inputHighlighter 0.3s ease;
@@ -400,28 +453,28 @@ input:focus ~ .highlight {
     background: transparent; } }
 
 @media only screen and (max-width: 800px) {
-  /* line 430, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 499, C:/xampp/htdocs/dayregistration/css/styles.scss */
   .wrapperHeader {
     float: none;
     margin-left: auto;
     margin-right: auto;
     width: 100%; }
-  /* line 436, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 505, C:/xampp/htdocs/dayregistration/css/styles.scss */
   .headerBackgroundLighter {
     padding-top: 1px;
     padding-bottom: 30px; }
-  /* line 440, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 509, C:/xampp/htdocs/dayregistration/css/styles.scss */
   .getStarted button {
     margin-left: 1% !important; } }
 
 @media only screen and (max-width: 790px) {
-  /* line 446, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 515, C:/xampp/htdocs/dayregistration/css/styles.scss */
   .materialCalendar {
     margin-left: auto;
     margin-right: auto;
     left: 0 !important; } }
 
-/* line 453, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 522, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .container {
   background-color: #ffffff;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.32);
@@ -432,7 +485,7 @@ input:focus ~ .highlight {
   margin-top: 50px;
   z-index: 999999; }
 
-/* line 464, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 532, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .container h1 {
   font-size: 24px;
   line-height: 2.5;
@@ -441,7 +494,7 @@ input:focus ~ .highlight {
   height: 19px;
   z-index: 40; }
 
-/* line 473, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 540, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .container p {
   font-size: 14px;
   font-family: "Roboto";
@@ -450,14 +503,14 @@ input:focus ~ .highlight {
   text-align: center;
   padding: 30px; }
 
-/* line 482, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 549, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .fabButton i {
   display: inline;
   color: #ffffff;
   line-height: 2.1;
   cursor: pointer; }
 
-/* line 489, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 556, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .materialCalendar {
   background-color: #ffffff;
   width: 164px;
@@ -465,14 +518,14 @@ input:focus ~ .highlight {
   margin-left: auto;
   margin-right: auto; }
 
-/* line 497, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 564, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .topRowCalendar {
   height: 30px;
   width: 100%;
   background-color: #f44336;
   margin-bottom: 25px; }
 
-/* line 504, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 571, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .holes {
   background-color: #b71c1c;
   width: 12px;
@@ -482,7 +535,7 @@ input:focus ~ .highlight {
   margin-right: auto;
   margin-top: 8px; }
 
-/* line 514, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 581, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .selectionsCalendar {
   width: 20px;
   height: 20px;
@@ -493,19 +546,19 @@ input:focus ~ .highlight {
   color: #4caf50;
   text-align: center; }
 
-/* line 525, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 592, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .selectionsCalendar i {
   margin-left: -2px;
   margin-top: -2px;
   cursor: pointer;
   color: #4caf50 !important; }
 
-/* line 532, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 599, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .selectionsCalendar i:active {
   display: none;
   font-weight: bold; }
 
-/* line 537, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 604, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .lineLong {
   background-color: #9e9e9e;
   width: 95px;
@@ -514,7 +567,7 @@ input:focus ~ .highlight {
   margin-top: -29px;
   margin-left: 35px; }
 
-/* line 546, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 613, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .lineShort {
   background-color: #9e9e9e;
   width: 65px;
@@ -523,7 +576,7 @@ input:focus ~ .highlight {
   margin-top: -14px;
   margin-left: 35px; }
 
-/* line 555, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 622, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .shadowBox {
   z-index: 0;
   width: 164px;
@@ -531,19 +584,19 @@ input:focus ~ .highlight {
   background: #fff; }
 
 @media only screen and (max-width: 1000px) {
-  /* line 563, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 630, C:/xampp/htdocs/dayregistration/css/styles.scss */
   .shadow::before,
   .shadow::after {
     display: none; }
-  /* line 567, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 634, C:/xampp/htdocs/dayregistration/css/styles.scss */
   .materialCalendar {
     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32); } }
 
-/* line 572, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 639, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .shadow {
   position: relative; }
 
-/* line 576, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 643, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .shadow::before,
 .shadow::after {
   width: 400px;
@@ -553,21 +606,21 @@ input:focus ~ .highlight {
   z-index: 0;
   transform-origin: top left; }
 
-/* line 586, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 653, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .shadow::before {
   height: 100%;
   left: 100%;
   transform: skewY(45deg);
   background-color: #00796b; }
 
-/* line 593, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 660, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .shadow::after {
   width: 100%;
   top: 100%;
   transform: skewX(45deg);
   background-color: #00796b; }
 
-/* line 600, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 667, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .headerBackgroundLighterNoshadow {
   background-color: #ffffff;
   width: 100%;
@@ -577,7 +630,7 @@ input:focus ~ .highlight {
   padding-bottom: 100px;
   overflow: auto; }
 
-/* line 610, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 677, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .containerBottom {
   background-color: #ffffff;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.32);
@@ -585,20 +638,21 @@ input:focus ~ .highlight {
   margin: 0px auto 0px auto;
   height: auto;
   width: 960px;
-  position: relative; }
+  position: relative;
+  text-align: center; }
 
-/* line 620, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 688, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .getStartedDraw {
   height: 235px;
   width: 100%;
   background-color: #009688; }
 
 @media only screen and (max-width: 800px) {
-  /* line 626, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 695, C:/xampp/htdocs/dayregistration/css/styles.scss */
   ::-webkit-scrollbar {
     display: none; } }
 
-/* line 630, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 700, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .orangeFirstHalf {
   background-color: #ff5722;
   width: 0;
@@ -610,7 +664,7 @@ input:focus ~ .highlight {
   position: absolute;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.32); }
 
-/* line 642, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 712, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .orangeSecondHalf {
   background-color: #ff5722;
   width: 0;
@@ -623,7 +677,7 @@ input:focus ~ .highlight {
   float: left;
   position: absolute; }
 
-/* line 655, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 725, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .clock {
   position: absolute;
   margin-top: -230px;
@@ -638,13 +692,13 @@ input:focus ~ .highlight {
   transition-timing-function: ease;
   cursor: pointer; }
 
-/* line 670, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 740, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .clock:active {
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
   background-color: #ff7043;
   border: 10px solid #ff855e; }
 
-/* line 676, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 746, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .pointerTall {
   background-color: #ffffff;
   width: 40px;
@@ -653,7 +707,7 @@ input:focus ~ .highlight {
   margin-top: 19px;
   margin-left: 18px; }
 
-/* line 685, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 755, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .pointerSmall {
   background-color: #ffffff;
   width: 30px;
@@ -663,7 +717,7 @@ input:focus ~ .highlight {
   transform-origin: top left;
   transform: rotate(25deg); }
 
-/* line 695, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 765, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .timer {
   position: absolute;
   margin-top: -180px;
@@ -680,11 +734,11 @@ input:focus ~ .highlight {
   z-index: 999999;
   cursor: pointer; }
 
-/* line 712, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 782, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .timer:active {
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.42); }
 
-/* line 716, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 786, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .timerTop {
   width: 20px;
   height: 20px;
@@ -697,7 +751,7 @@ input:focus ~ .highlight {
   margin-top: -5px;
   margin-left: 330px; }
 
-/* line 729, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 799, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .timerLeft {
   width: 8px;
   height: 15px;
@@ -709,7 +763,7 @@ input:focus ~ .highlight {
   margin-top: -15px;
   margin-left: 385px; }
 
-/* line 741, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 811, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .timerRight {
   width: 8px;
   height: 15px;
@@ -721,7 +775,7 @@ input:focus ~ .highlight {
   margin-top: -15px;
   margin-left: 304px; }
 
-/* line 753, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 823, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .calendar {
   width: 110px;
   height: 80px;
@@ -735,12 +789,12 @@ input:focus ~ .highlight {
   transition-duration: 0.2s;
   transition-timing-function: ease; }
 
-/* line 767, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 837, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .calendar:active {
   box-shadow: 0px -8px 10px 0px rgba(0, 0, 0, 0.42);
   background-color: #0192e0; }
 
-/* line 772, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 842, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .calendarLighter p {
   color: #ffffff;
   font-weight: bold;
@@ -757,7 +811,7 @@ input:focus ~ .highlight {
   -ms-user-select: none;
   user-select: none; }
 
-/* line 789, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 859, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .calendarLighter {
   background-color: #088bd1;
   width: 100%;
@@ -766,14 +820,14 @@ input:focus ~ .highlight {
   border-bottom-right-radius: 10px;
   transform: rotate(180deg); }
 
-/* line 798, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 868, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .getStarted {
   width: 100%;
   background-color: #ffffff;
   height: 65px;
   position: relative; }
 
-/* line 805, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 875, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .getStarted button {
   background-color: #ffffff;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.32);
@@ -790,43 +844,43 @@ input:focus ~ .highlight {
   border-radius: 2px;
   cursor: pointer; }
 
-/* line 822, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 892, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .getStarted button:active {
   color: #535353;
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32); }
 
-/* line 827, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 897, C:/xampp/htdocs/dayregistration/css/styles.scss */
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px; }
 
-/* line 832, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 902, C:/xampp/htdocs/dayregistration/css/styles.scss */
 ::-webkit-scrollbar-track {
   background: #d0d0d0; }
 
-/* line 836, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 906, C:/xampp/htdocs/dayregistration/css/styles.scss */
 ::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.15);
   transition-duration: 0.2s;
   transition-timing-function: ease; }
 
-/* line 842, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 912, C:/xampp/htdocs/dayregistration/css/styles.scss */
 ::-webkit-scrollbar-thumb:active {
   background: #8b8b8b; }
 
-/* line 846, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 916, C:/xampp/htdocs/dayregistration/css/styles.scss */
 #clouds {
   padding: 200px 0;
   background: transparent;
   overflow-x: hidden; }
 
 @media only screen and (max-width: 800px) {
-  /* line 853, C:/xampp/htdocs/dayregistration/css/styles.scss */
+  /* line 923, C:/xampp/htdocs/dayregistration/css/styles.scss */
   #clouds {
     padding: 100px 0;
     background: transparent; } }
 
-/* line 859, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 929, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .cloud {
   width: 200px;
   height: 60px;
@@ -837,7 +891,7 @@ input:focus ~ .highlight {
   position: relative;
   box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32); }
 
-/* line 870, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 940, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .cloud:before,
 .cloud:after {
   content: '';
@@ -855,7 +909,7 @@ input:focus ~ .highlight {
   transform: rotate(30deg);
   -moz-transform: rotate(30deg); }
 
-/* line 888, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 958, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .cloud:after {
   width: 120px;
   height: 120px;
@@ -863,13 +917,13 @@ input:focus ~ .highlight {
   left: auto;
   right: 15px; }
 
-/* line 896, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 966, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .x1 {
   -webkit-animation: moveclouds 15s linear infinite;
   -moz-animation: moveclouds 15s linear infinite;
   -o-animation: moveclouds 15s linear infinite; }
 
-/* line 902, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 972, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .x2 {
   left: 200px;
   -webkit-transform: scale(0.6);
@@ -880,7 +934,7 @@ input:focus ~ .highlight {
   -moz-animation: moveclouds 25s linear infinite;
   -o-animation: moveclouds 25s linear infinite; }
 
-/* line 913, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 983, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .x3 {
   left: -250px;
   top: -200px;
@@ -893,7 +947,7 @@ input:focus ~ .highlight {
   -moz-animation: moveclouds 20s linear infinite;
   -o-animation: moveclouds 20s linear infinite; }
 
-/* line 926, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 996, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .x4 {
   left: 470px;
   top: -250px;
@@ -906,7 +960,7 @@ input:focus ~ .highlight {
   -moz-animation: moveclouds 18s linear infinite;
   -o-animation: moveclouds 18s linear infinite; }
 
-/* line 939, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 1009, C:/xampp/htdocs/dayregistration/css/styles.scss */
 .x5 {
   left: -150px;
   top: -150px;
@@ -937,7 +991,7 @@ input:focus ~ .highlight {
   100% {
     margin-left: -1000px; } }
 
-/* line 979, C:/xampp/htdocs/dayregistration/css/styles.scss */
+/* line 1049, C:/xampp/htdocs/dayregistration/css/styles.scss */
 ::-webkit-scrollbar-track:horizontal {
   display: none; }
 
