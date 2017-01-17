@@ -1,13 +1,10 @@
-<?php
+<?php session_start();
     include("inc/connect.php");
-    include("inc/random.php");
 
-    if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
-            session_destroy();
-            header("Location: index.php");
+if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
+        session_destroy();
+        header("Location: login.php");
     }
-
-
 
 $stageDays = 365;
 $username = $_SESSION['login_user'];
@@ -17,7 +14,10 @@ if(isset($_POST['addButton'])){
       $daysAdd = $conn->prepare("UPDATE `users` SET `days_worked`= `days_worked` + 1 WHERE`username` =  :username");
       $daysAdd->execute(array('username'=>$username));
 }
-
+if(isset($_SESSION['login_user'])){}
+    else {
+        header("Location: index.php");
+    }
 if(isset($_POST['minusButton'])){
 
       $daysRemove = $conn->prepare("UPDATE `users` SET `days_worked`= `days_worked` - 1 WHERE`username` =  :username");

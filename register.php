@@ -1,7 +1,11 @@
-<?php
+<?php session_start();
 
 include("inc/connect.php");
-include("inc/random.php");
+
+if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
+        session_destroy();
+        header("Location: login.php");
+    }
 
 if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['password'])){
 
