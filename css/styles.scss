@@ -26,7 +26,7 @@ $boxshadowMedium: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
 html,
 body {
     margin: 0 auto;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
     overflow-x: hidden !important;
     background-color: #ffffff;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -188,7 +188,7 @@ button {
 }
 .progress {
     position: relative;
-    height: 6px;
+    height: 15px;
     display: block;
     width: 80%;
     background-color: $grey;
@@ -684,7 +684,23 @@ input:focus ~ .highlight {
     position: relative;
     text-align: center;
 }
-
+.progressContainer {
+    background-color: $white;
+    box-shadow: $boxshadowLight;
+    min-height: 300px;
+    margin: 20px auto 0px auto;
+    height: auto;
+    width: 960px;
+    position: relative;
+    text-align: center;
+    padding: 10px 10 50px 10px;
+}
+.progressContainer p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
 .getStartedDraw {
     height: 235px;
     width: 100%;
