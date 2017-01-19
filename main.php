@@ -1,10 +1,11 @@
 <?php session_start();
     include("inc/connect.php");
+    include("inc/changes.php");
 
 if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
         session_destroy();
         header("Location: login.php");
-    }
+}
 
 $stageDays = 365;
 $username = $_SESSION['login_user'];
@@ -24,7 +25,6 @@ if(isset($_POST['minusButton'])){
       $daysRemove->execute(array('username'=>$username));
 }
 
-
 $days = $conn->prepare("SELECT `days_worked` FROM `users` WHERE `username` = :username");
 $days->execute(array('username'=>$username));
 
@@ -35,6 +35,7 @@ $days->execute(array('username'=>$username));
     <head>
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/material.css">
         <link rel="stylesheet" href="css/progress.scss">
@@ -53,13 +54,20 @@ $days->execute(array('username'=>$username));
             <a href="login.php?action=logout">
                 <button class="buttonRaised">LOGOUT</button>
             </a>
+            <a href="settings.php">
+                <button class="buttonRaised">SETTINGS</button>
+            </a>
             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
                 <a href="login.php?action=logout">
                     <li class="mdl-menu__item">LOGOUT</li>
                 </a>
+                <a href="settings.php">
+                    <li class="mdl-menu__item">SETTINGS</li>
+                </a>
             </ul>
         </div>
         <div class="progressContainer">
+            <br/>
             <h1>Progress</h1>
             <div class="add">
                 <form method="post" action="">
@@ -109,6 +117,8 @@ $days->execute(array('username'=>$username));
                     </div>
                 </div>
             </div>
+            <br/>
+            <br/>
             <?php
              }
             ?>

@@ -1,5 +1,6 @@
 <?php session_start();
     include("inc/connect.php");
+    include("inc/changes.php");
 
     if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
         session_destroy();
@@ -13,13 +14,14 @@
         <title>Dayregistration | Index</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/material.css">
         <script src="css/material.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
     </head>
     <body>
-        <div class="menuBar">
+        <div class="<?php if(isset($_SESSION['login_user'])){ echo "menuBar";} else { echo "menuBarIndex"; }?>">
             <div class="logo">
                 <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
                     <i class="material-icons">more_vert</i>
@@ -124,7 +126,7 @@
         <div class="headerBackgroundLighter">
             <div class="wrapperHeader">
                 <div class="container">
-                    <div class="fabButton">
+                    <div class="<?php if(isset($_SESSION['login_user'])){ echo "fabButton";} else { echo "fabButtonIndex"; }?>">
                         <a href="register.php"><i class="material-icons">access_time</i></a>
                     </div>
                     <h1>Safe time</h1>
@@ -133,7 +135,7 @@
             </div>
             <div class="wrapperHeader">
                 <div class="container">
-                    <div class="fabButton">
+                    <div class="<?php if(isset($_SESSION['login_user'])){ echo "fabButton";} else { echo "fabButtonIndex"; }?>">
                         <a href="register.php"><i class="material-icons">phone_iphone</i></a>
                     </div>
                     <h1>On the go?</h1>
@@ -142,7 +144,7 @@
             </div>
             <div class="wrapperHeader">
                 <div class="container">
-                    <div class="fabButton">
+                    <div class="<?php if(isset($_SESSION['login_user'])){ echo "fabButton";} else { echo "fabButtonIndex"; }?>">
                         <a href="register.php"><i class="material-icons">brush</i></a>
                     </div>
                     <h1>Customize</h1>

@@ -23,15 +23,6 @@ $boxshadowMedium: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
 
 /*----------Center-------------*/
 
-html,
-body {
-    margin: 0 auto;
-    font-family: 'Roboto', sans-serif !important;
-    overflow-x: hidden !important;
-    background-color: #ffffff;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-}
-
 p {
     margin: 0 auto;
 }
@@ -76,42 +67,89 @@ button {
     outline: 0;
     border: none;
 }
-
-.menuBar {
-    background-color: #ff5722;
-    box-shadow: $boxshadowLight;
+.purple {
+    background-color:#9c27b0;
+    height: 50px;
+    width: 50px;
+    border-radius:25px;
+    margin:10px;
+    cursor:pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    box-shadow:$boxshadowLight;
+}
+.purple:active {
+    background-color:#b42ecb;
+    box-shadow:$boxshadowMedium;
+}
+.orange {
+    background-color:#ff5722;
+    height: 50px;
+    width: 50px;
+    border-radius:25px;
+    margin:10px;
+    cursor:pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    box-shadow:$boxshadowLight;
+}
+.orange:active {
+    background-color:#ff6838;
+    box-shadow:$boxshadowMedium;
+}
+.red {
+    background-color:#f44336;
+    height: 50px;
+    width: 50px;
+    border-radius:25px;
+    margin:10px;
+    cursor:pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    box-shadow:$boxshadowLight;
+}
+.red:active {
+    background-color:#fd5346;
+    box-shadow:$boxshadowMedium;
+}
+.blue {
+    background-color:#3f51b5;
+    height: 50px;
+    width: 50px;
+    border-radius:25px;
+    margin:10px;
+    cursor:pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    box-shadow:$boxshadowLight;
+}
+.blue:active {
+    background-color:#4659c3;
+    box-shadow:$boxshadowMedium;
+}
+.font {
+    background-color:#ffffff;
+    width: 90px;
+    border-radius: 2px;
+    height: 34px;
+    margin:10px 2.5px 10px 2.5px;
+    cursor:pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    box-shadow:$boxshadowMedium;
+}
+.font:active {
+    background-color:#babbbe;
+}
+.menuBarIndex {
+    background-color:#ff5722;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.32);
     position: fixed;
     left: 0px;
     top: 0px;
     width: 100%;
     height: 64px;
     z-index: 999999;
-}
-.fabButton {
-    background-color: #ff5722;
-    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-top: -25px;
-    margin-left: -25px;
-    position: absolute;
-    float: right;
-    text-align: center;
-    cursor: pointer;
-    transition-duration: 0.2s;
-    transition-timing-function: ease;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.fabButton:active {
-    filter: brightness(140%);
-    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
 }
 
 @media only screen and (max-width: 800px) {
@@ -123,7 +161,6 @@ button {
 .buttonRaisedLogin {
     background-color: #ff5722;
     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
-    font-weight: bold;
     float: right;
     margin-right: -25px;
     filter: brightness(120%);
@@ -139,9 +176,8 @@ button {
 }
 
 .buttonRaised {
-    background-color: #ff5722;
+    background-color: rgba(255, 255, 255, 0.13);
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.32);
-    font-weight: bold;
     float: right;
     margin-right: 30px;
     filter: brightness(120%);
@@ -159,53 +195,6 @@ button {
 .buttonRaised:active {
     filter: brightness(140%);
     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.32);
-}
-.addButton {
-    width: 40px;
-    height: 40px;
-    box-shadow: $boxshadowLight;
-    margin: 10px;
-    background-color:$orange;
-    border-radius:2px;
-    transition-duration: 0.2s;
-    transition-timing-function: ease;
-}
-.addButton:active {
-    background-color: $lightorange;
-}
-.minusButton {
-    width: 40px;
-    height: 40px;
-    box-shadow: $boxshadowLight;
-    margin: 10px;
-    background-color:$orange;
-    border-radius:2px;
-    transition-duration: 0.2s;
-    transition-timing-function: ease;
-}
-.minusButton:active {
-    background-color: $lightorange;
-}
-.progress {
-    position: relative;
-    height: 15px;
-    display: block;
-    width: 80%;
-    background-color: $grey;
-    border-radius: 2px;
-    background-clip: padding-box;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-}
-
-.progress .determinate {
-    position: absolute;
-    background-color: inherit;
-    top: 0;
-    bottom: 0;
-    background-color: $orange;
-    transition: width .3s linear;
 }
 
 .mdl-navigation__link {
@@ -298,16 +287,6 @@ button {
     z-index: -999999;
     padding-bottom: 40px;
     padding-top: 30px;
-}
-
-.logRegBackground {
-    background-color: $grey;
-    overflow: hidden;
-}
-
-.mainBackground {
-    background-color: $greenblue;
-    padding-top: 80px;
 }
 
 .headerBackgroundGradient {
@@ -539,18 +518,10 @@ input:focus ~ .highlight {
 }
 .container p {
     font-size: 14px;
-    font-family: "Roboto";
     color: rgb(0, 0, 0);
     line-height: 1.2;
     text-align: center;
     padding: 30px;
-}
-
-.fabButton i {
-    display: inline;
-    color: #ffffff;
-    line-height: 2.1;
-    cursor: pointer;
 }
 
 .materialCalendar {
@@ -690,10 +661,22 @@ input:focus ~ .highlight {
     min-height: 300px;
     margin: 20px auto 0px auto;
     height: auto;
-    width: 960px;
+    width: 700px;
     position: relative;
     text-align: center;
     padding: 10px 10 50px 10px;
+}
+.progressContainer button {
+    padding: 8px;
+}
+@media only screen and (max-width: 800px) {
+    .progressContainer {
+        width: 100%;
+        padding: 0;
+    }
+    .progress {
+        width: 90%;
+    }
 }
 .progressContainer p {
     font-size: 20px;

@@ -1,6 +1,7 @@
 <?php session_start();
 
 include("inc/connect.php");
+include("inc/changes.php");
 
 if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
         session_destroy();
@@ -9,16 +10,16 @@ if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
 
 if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['password'])){
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
     $roles_id = 2;
+    $user_color = '#ff5722';
+    $user_font = '"Roboto", sans-serif;';
 
-    $username = filter_var($username, FILTER_SANITIZE_STRING);
-    $password = filter_var($password, FILTER_SANITIZE_STRING);
+    $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+    $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 
-    $query = $conn->prepare("INSERT INTO `users`(username, password, roles_id) VALUES(:username, :password, :roles_id)");
+    $query = $conn->prepare("INSERT INTO `users`(username, password, roles_id, user_color, user_font) VALUES(:username, :password, :roles_id, :user_color, :user_font)");
 
-    $query->execute(array('username' => $username, 'password' => $password, 'roles_id' => $roles_id));
+    $query->execute(array('username' => $username, 'password' => $password, 'roles_id' => $roles_id, 'user_color' => $user_color, 'user_font' => $user_font));
 
     if($query){
         header('Location: login.php');
@@ -39,6 +40,7 @@ if(!isset($_SESSION['login_user'])){}
         <title>Dayregistration | Registration</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/material.css">
         <script src="css/material.js"></script>
@@ -46,7 +48,7 @@ if(!isset($_SESSION['login_user'])){}
     </head>
 
     <body class="logRegBackground">
-        <div class="menuBar">
+        <div class="menuBarIndex">
             <div class="logo">
                 <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
                     <i class="material-icons">more_vert</i>

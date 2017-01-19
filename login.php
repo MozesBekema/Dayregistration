@@ -1,6 +1,7 @@
 <?php session_start();
 
     include("inc/connect.php");
+    include("inc/changes.php");
 
     if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
         session_destroy();
@@ -39,13 +40,14 @@
             <title>Dayregistration | Login</title>
             <link href="css/styles.css" rel="stylesheet" type="text/css">
             <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <link rel="stylesheet" href="css/material.css">
             <script src="css/material.js"></script>
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
         </head>
         <body class="logRegBackground">
-            <div class="menuBar">
+            <div class="menuBarIndex">
                 <div class="logo">
                     <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
                         <i class="material-icons">more_vert</i>
