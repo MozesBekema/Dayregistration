@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 10 jan 2017 om 09:48
--- Serverversie: 10.1.16-MariaDB
--- PHP-versie: 5.6.24
+-- Gegenereerd op: 19 jan 2017 om 21:27
+-- Serverversie: 10.1.19-MariaDB
+-- PHP-versie: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -51,18 +51,18 @@ CREATE TABLE `users` (
   `password` varchar(100) DEFAULT NULL,
   `roles_id` int(11) NOT NULL,
   `user_ip` varchar(45) NOT NULL,
-  `email` varchar(50) NOT NULL
+  `email` varchar(50) NOT NULL,
+  `days_worked` int(11) NOT NULL,
+  `user_color` varchar(100) NOT NULL,
+  `user_font` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `roles_id`, `user_ip`, `email`) VALUES
-(1, 'admin', '55c3b5386c486feb662a0785f340938f518d547f', 1, '', ''),
-(131, 'bekema', 'bekema', 2, '', 'thomas.cb@hotmail.nl'),
-(132, 'bekema', 'DASKFSDFADFA', 2, '', 'bekema@gmail.com'),
-(133, 'halo', 'halo', 2, '', 'hlao0@haloe.nl');
+INSERT INTO `users` (`id`, `username`, `password`, `roles_id`, `user_ip`, `email`, `days_worked`, `user_color`, `user_font`) VALUES
+(140, 'localjoost', 'joost', 2, '', '', 68, '#3f51b5;', '"Roboto", sans-serif;');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -79,6 +79,7 @@ ALTER TABLE `roles`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`,`roles_id`),
+  ADD UNIQUE KEY `username` (`username`),
   ADD KEY `fk_users_rolls_idx` (`roles_id`);
 
 --
@@ -94,7 +95,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 --
 -- Beperkingen voor geëxporteerde tabellen
 --
