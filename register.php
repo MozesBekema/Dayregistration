@@ -44,6 +44,7 @@ if(!isset($_SESSION['login_user'])){}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/material.css">
         <link href="img/logo.png" rel="icon">
+        <meta name="theme-color" content="#ff5722">
         <script src="css/material.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
     </head>
@@ -65,11 +66,11 @@ if(!isset($_SESSION['login_user'])){}
                 <button class="buttonRaised">LOGIN</button>
             </a>
             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
-                <a href="index.php">
-                    <li class="mdl-menu__item">BACK</li>
-                </a>
-                <a href="login.php">
-                <button class="buttonRaised">LOGIN</button>
+            <a href="index.php">
+                <li class="mdl-menu__item">BACK</li>
+            </a>
+            <a href="login.php">
+                <li class="mdl-menu__item">LOGIN</li>
             </a>
             </ul>
         </div>
