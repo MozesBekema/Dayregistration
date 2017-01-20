@@ -11,7 +11,7 @@ if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
 if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['password'])){
 
     $roles_id = 2;
-    $user_color = '#ff5722';
+    $user_color = '#ff5722;';
     $user_font = '"Roboto", sans-serif;';
 
     $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
@@ -43,6 +43,7 @@ if(!isset($_SESSION['login_user'])){}
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/material.css">
+        <link href="img/logo.png" rel="icon">
         <script src="css/material.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
     </head>
