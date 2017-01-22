@@ -132,7 +132,7 @@
                         <a href="register.php"><i class="material-icons">access_time</i></a>
                     </div>
                     <h1>Safe time</h1>
-                    <p>Don’t worry about the amount days you’ve worked.</p>
+                    <p>Don’t worry about the amount of days you’ve worked.</p>
                 </div>
             </div>
             <div class="wrapperHeader">
