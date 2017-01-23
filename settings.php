@@ -19,9 +19,10 @@
 
         $startDate = $_POST['startDate'];
         $endDate = $_POST['endDate'];
+        $dayReset = 0;
 
-        $date = $conn->prepare("UPDATE `users` SET `startDate` = :start, `endDate` = :end WHERE `username` = :username");
-        $date->execute(array('start' => $startDate, 'end' => $endDate, 'username' => $username));
+        $date = $conn->prepare("UPDATE `users` SET `startDate` = :start, `endDate` = :end, `days_worked` = :dayReset WHERE `username` = :username");
+        $date->execute(array('start' => $startDate, 'end' => $endDate, 'username' => $username, 'dayReset' => $dayReset));
     }
 
 
@@ -70,11 +71,11 @@
         <div class="progressContainer">
             <br/>
             <h1>Settings</h1>
-
+            <p>Choose a start &amp; end date to start.</p><br/>
             <form action="" method="post">
-                <input type="date" class="" name="startDate" value="Start date">
-                <input type="date" class="" name="endDate" value="End date">
-                <button type="submit" class="" name="dateSubmit">Submit date</button>
+                <input type="date" class="datePicker" name="startDate" value="Start date">
+                <input type="date" class="datePicker" name="endDate" value="End date">
+                <button type="submit" class="buttonRaisedMain" name="dateSubmit">Submit date</button>
             </form>
 
             <p>Choose a theme color:</p><br/>

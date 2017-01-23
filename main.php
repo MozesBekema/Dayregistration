@@ -43,7 +43,9 @@ foreach($date as $row){
     $stageDays = intval($stageDays) ;
 
 }
-
+if($stageDays == 0){
+    header("Location:settings.php");
+}
 ?>
     <!doctype>
     <html>
@@ -95,11 +97,34 @@ foreach($date as $row){
             </div>
             <?php
              foreach($days as $row){
+                 if($row['days_worked'] <= 0){
+                    ?>
+                    <style>
+                        .minusButton {
+                            display: none;
+                        }
+                    </style>
+                    <?php
+                        $reset = 0;
+
+                        $dayReset = $conn->prepare("UPDATE `users` SET `days_worked` = :daysReset WHERE `username` = :username");
+                        $dayReset->execute(array('username' => $username, 'daysReset' => $reset));
+                }
             ?>
             <div id="progress">
                 <div class="progressResult">
                     <?php
                         $percentage = $row['days_worked'] / $stageDays * 100;
+                        if($percentage >= 100){
+                    ?>
+                    <style>
+                        .addButton {
+                            display: none;
+                        }
+                    </style>
+                    <?php
+                        echo "<p class='congrats'>Congrats! You finished your project.</p><p class='congrats'> Go to the <a href='settings.php'>Settings</a> to set new dates</p><br/>";
+                    }
                     ?>
                     <p>
                         <?php
