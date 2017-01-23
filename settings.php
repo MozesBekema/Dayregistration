@@ -9,6 +9,24 @@
     if(!isset($_SESSION['login_user'])){
         header("Location: index.php");
     }
+
+
+
+
+
+
+    if(isset($_POST['dateSubmit'])){
+
+        $startDate = $_POST['startDate'];
+        $endDate = $_POST['endDate'];
+
+        $date = $conn->prepare("UPDATE `users` SET `startDate` = :start, `endDate` = :end WHERE `username` = :username");
+        $date->execute(array('start' => $startDate, 'end' => $endDate, 'username' => $username));
+    }
+
+
+
+
 ?>
 
 <!doctype>
@@ -52,6 +70,13 @@
         <div class="progressContainer">
             <br/>
             <h1>Settings</h1>
+
+            <form action="" method="post">
+                <input type="date" class="" name="startDate" value="Start date">
+                <input type="date" class="" name="endDate" value="End date">
+                <button type="submit" class="" name="dateSubmit">Submit date</button>
+            </form>
+
             <p>Choose a theme color:</p><br/>
             <form action="" method="post">
                 <button class="purple" type="submit" name="purpleSubmit"></button>

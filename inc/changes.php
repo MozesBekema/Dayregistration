@@ -58,6 +58,15 @@
     foreach ($switchFont as $row){
         $font = $row['user_font'];
     }
+
+
+
+
+
+
+
+
+
 ?>
 <style>
 html,

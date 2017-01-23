@@ -7,7 +7,6 @@ if(isset($_GET['action'] ) && $_GET['action'] == "logout"){
         header("Location: login.php");
 }
 
-$stageDays = 94;
 $username = $_SESSION['login_user'];
 
 if(isset($_POST['addButton'])){
@@ -27,6 +26,23 @@ if(isset($_POST['minusButton'])){
 
 $days = $conn->prepare("SELECT `days_worked` FROM `users` WHERE `username` = :username");
 $days->execute(array('username'=>$username));
+
+
+$date = $conn->prepare("SELECT `startDate`, `endDate` FROM `users` WHERE `username` = :username");
+$date->execute(array('username' => $username));
+
+foreach($date as $row){
+    $startTimeStamp = strtotime($row['startDate']);
+    $endTimeStamp = strtotime($row['endDate']);
+
+    $timeDiff = abs($endTimeStamp - $startTimeStamp);
+
+    $stageDays = $timeDiff/86400;  // 86400 seconds in one day
+
+
+    $stageDays = intval($stageDays) ;
+
+}
 
 ?>
     <!doctype>
@@ -73,8 +89,8 @@ $days->execute(array('username'=>$username));
             <h1>Progress</h1>
             <div class="add">
                 <form method="post" action="">
-                    <button class="addButton" name="addButton" type="submit"><i class="material-icons">exposure_plus_1</i></button>
                     <button class="minusButton" name="minusButton" type="submit" ><i class="material-icons">exposure_neg_1</i></button>
+                    <button class="addButton" name="addButton" type="submit"><i class="material-icons">exposure_plus_1</i></button>
                 </form>
             </div>
             <?php
