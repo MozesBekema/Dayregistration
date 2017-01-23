@@ -57,8 +57,8 @@ if($stageDays == 0){
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/material.css">
         <link rel="stylesheet" href="css/progress.scss">
-        <link href="img/logo.png" rel="icon">
-        <meta name="theme-color" content="#ff5722">
+        <link href="img/icon.png" rel="icon">
+        <meta name="theme-color" content="<?php echo $color?>">
         <script src="css/material.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
         <title>Dayregistration | Progress</title>
@@ -166,8 +166,6 @@ if($stageDays == 0){
              }
             ?>
         </div>
-
-
     </body>
 
     </html>

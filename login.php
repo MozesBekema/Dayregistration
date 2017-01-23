@@ -43,7 +43,7 @@
             <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <link rel="stylesheet" href="css/material.css">
-            <link href="img/logo.png" rel="icon">
+            <link href="img/icon.png" rel="icon">
             <meta name="theme-color" content="#ff5722">
             <script src="css/material.js"></script>
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
@@ -98,10 +98,10 @@
             </div>
             <div class="headerBackgroundGradient">
                 <div id="clouds">
-                    <div class="cloud x1"></div>
+                    <a href="http://joostdelange.nl" target="_blank"><div class="cloud x1"></div></a>
                     <div class="cloud x2"></div>
                     <div class="cloud x3"></div>
-                    <div class="cloud x4"></div>
+                    <a href="http://thomasbekema.nl" target="_blank"><div class="cloud x4"></div></a>
                     <div class="cloud x5"></div>
                 </div>
             </div>

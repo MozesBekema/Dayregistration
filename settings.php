@@ -9,12 +9,6 @@
     if(!isset($_SESSION['login_user'])){
         header("Location: index.php");
     }
-
-
-
-
-
-
     if(isset($_POST['dateSubmit'])){
 
         $startDate = $_POST['startDate'];
@@ -24,10 +18,6 @@
         $date = $conn->prepare("UPDATE `users` SET `startDate` = :start, `endDate` = :end, `days_worked` = :dayReset WHERE `username` = :username");
         $date->execute(array('start' => $startDate, 'end' => $endDate, 'username' => $username, 'dayReset' => $dayReset));
     }
-
-
-
-
 ?>
 
 <!doctype>
@@ -39,8 +29,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/material.css">
         <link rel="stylesheet" href="css/progress.scss">
-        <link href="img/logo.png" rel="icon">
-        <meta name="theme-color" content="#ff5722">
+        <link href="img/icon.png" rel="icon">
+        <meta name="theme-color" content="<?php echo $color?>">
         <script src="css/material.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
         <title>Dayregistration | Settings</title>
