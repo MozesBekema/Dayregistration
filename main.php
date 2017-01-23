@@ -87,7 +87,7 @@ $days->execute(array('username'=>$username));
                     ?>
                     <p>
                         <?php
-                            echo number_format((float)$percentage, 2, '.', '') . "%" ;
+                            echo number_format((float)$percentage, 2, '.', '') . "%";
                         ?>
                     </p>
                     <div class="progress">
