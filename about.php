@@ -6,9 +6,6 @@
         session_destroy();
         header("Location: login.php");
     }
-    if(!isset($_SESSION['login_user'])){
-        header("Location: index.php");
-    }
     if(isset($_POST['dateSubmit'])){
 
         $startDate = $_POST['startDate'];
@@ -36,7 +33,7 @@
         <title>Dayregistration | Settings</title>
     </head>
     <body class="mainBackground">
-        <div class="menuBar">
+        <div class="<?php if(isset($_SESSION['login_user'])){ echo "menuBar";} else { echo "menuBarIndex"; }?>">
             <div class="logo">
                 <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon"> <i class="material-icons">more_vert</i> </button>
             </div>
