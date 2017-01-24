@@ -20,6 +20,7 @@
         <script src="css/material.js"></script>
         <link href="img/icon.png" rel="icon">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+        <?php include("inc/mobilechanges.php"); ?>
     </head>
     <body>
         <div class="<?php if(isset($_SESSION['login_user'])){ echo "menuBar";} else { echo "menuBarIndex"; }?>">

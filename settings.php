@@ -34,6 +34,7 @@
         <script src="css/material.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
         <title>Dayregistration | Settings</title>
+        <?php include("inc/mobilechanges.php"); ?>
     </head>
     <body class="mainBackground">
         <div class="menuBar">

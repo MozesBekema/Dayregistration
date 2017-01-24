@@ -59,9 +59,6 @@
         $font = $row['user_font'];
     }
 ?>
-<head>
-    <meta name="theme-color" content="<?php  if(isset($_SESSION['login_user'])){ echo $color;} else { echo "#ff5722"; }?>">
-</head>
 <style>
 html,
 body {
