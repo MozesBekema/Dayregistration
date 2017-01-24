@@ -62,6 +62,9 @@
             <?php
                 }
             ?>
+            <a href="about.php">
+                <button class="buttonRaised">ABOUT</button>
+            </a>
             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
                 <?php
                     if(!isset($_SESSION['login_user'])){
@@ -93,6 +96,9 @@
                 <?php
                     }
                 ?>
+                <a href="about.php">
+                    <li class="mdl-menu__item">ABOUT</li>
+                </a>
             </ul>
         </div>
         <div class="headerBackground">

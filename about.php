@@ -49,9 +49,6 @@
             <a href="main.php">
                 <button class="buttonRaised">PROFILE</button>
             </a>
-            <a href="about.php">
-                <button class="buttonRaised">ABOUT</button>
-            </a>
             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
                 <a href="login.php?action=logout">
                     <li class="mdl-menu__item">LOGOUT</li>
@@ -59,31 +56,14 @@
                 <a href="main.php">
                     <li class="mdl-menu__item">PROFILE</li>
                 </a>
-                <a href="about.php">
-                    <li class="mdl-menu__item">ABOUT</li>
-                </a>
             </ul>
         </div>
-        <div class="progressContainer">
+        <div class="aboutContainer">
             <br/>
-            <h1>Settings</h1>
-            <p>Choose a start &amp; end date to start.</p><br/>
-            <form action="" method="post">
-                <input type="date" class="datePicker" name="startDate" value="Start date">
-                <input type="date" class="datePicker" name="endDate" value="End date">
-                <button type="submit" class="buttonRaisedMain" name="dateSubmit">Submit date</button>
-            </form>
-
-            <p>Choose a theme color:</p><br/>
-            <form action="" method="post">
-                <button class="purple" type="submit" name="purpleSubmit"></button>
-                <button class="orange" type="submit" name="orangeSubmit"></button>
-                <button class="red" type="submit" name="redSubmit"></button>
-                <button class="blue" type="submit" name="blueSubmit"></button><br/>
-                <button class="font" type="submit" name="serifSubmit">Sans Serif</button>
-                <button class="font" type="submit" name="robotoSubmit">Roboto</button>
-                <button class="font" type="submit" name="indieSubmit">Indie Flower</button>
-            </form>
+            <h1>About</h1>
+            <p>This website is a student project made by <a href="http://thomasbekema.nl" target="_blank">Thomas Bekema</a> &amp; <a href="http://joostdelange.nl" target="_blank">Joost de Lange</a>. We are about to go on an internship and we thought this is a great solution to track how many days we are into our internship.</a></p><br/>
+            <p>The hosting of dayregistration.nl is made posible by <a href="http://rebelcore.nl" target="_blank">Daen Rebel</a></p><br/>
+            <p>Thanks for using our site, We really enjoyed working on it and there will be updates with great new features very soon!</p>
         </div>
     </body>
 

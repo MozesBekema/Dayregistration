@@ -64,12 +64,18 @@
                 <a href="register.php">
                     <button class="buttonRaised">REGISTER</button>
                 </a>
+                <a href="about.php">
+                    <button class="buttonRaised">ABOUT</button>
+                </a>
                 <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
                     <a href="index.php">
                         <li class="mdl-menu__item">BACK</li>
                     </a>
                     <a href="register.php">
                         <li class="mdl-menu__item">REGISTER</li>
+                    </a>
+                    <a href="about.php">
+                        <li class="mdl-menu__item">ABOUT</li>
                     </a>
                 </ul>
             </div>
