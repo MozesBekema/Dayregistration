@@ -19,7 +19,6 @@
         <link rel="stylesheet" href="css/material.css">
         <script src="css/material.js"></script>
         <link href="img/icon.png" rel="icon">
-        <meta name="theme-color" content="<?php echo $color?>">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
     </head>
     <body>

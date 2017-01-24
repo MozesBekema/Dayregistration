@@ -58,16 +58,8 @@
     foreach ($switchFont as $row){
         $font = $row['user_font'];
     }
-
-
-
-
-
-
-
-
-
 ?>
+<meta name="theme-color" content="<?php  if(isset($_SESSION['login_user'])){ echo $color;} else { echo "#ff5722"; }?>">
 <style>
 html,
 body {

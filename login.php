@@ -16,6 +16,8 @@
         $username = filter_var($username, FILTER_SANITIZE_STRING);
         $password = filter_var($password, FILTER_SANITIZE_STRING);
 
+        $password = md5(sha1($password));
+
 
         $query = $conn->prepare("SELECT COUNT(`id`) FROM `users` WHERE `username`= :username AND `password` = :password");
         $query->execute(array('username'=>$username, 'password'=>$password));

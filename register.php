@@ -17,6 +17,8 @@ if(isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['passwor
     $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
     $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 
+    $password = md5(sha1($password));
+
     $query = $conn->prepare("INSERT INTO `users`(username, password, roles_id, user_color, user_font) VALUES(:username, :password, :roles_id, :user_color, :user_font)");
 
     $query->execute(array('username' => $username, 'password' => $password, 'roles_id' => $roles_id, 'user_color' => $user_color, 'user_font' => $user_font));
