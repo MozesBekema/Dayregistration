@@ -40,18 +40,12 @@
             <a href="index.php">
                 <p class="dayRegistration">Day Registration</p>
             </a>
-            <a href="login.php?action=logout">
-                <button class="buttonRaised">LOGOUT</button>
-            </a>
-            <a href="main.php">
-                <button class="buttonRaised">PROFILE</button>
+            <a href="index.php">
+                <button class="buttonRaised">BACK</button>
             </a>
             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
-                <a href="login.php?action=logout">
-                    <li class="mdl-menu__item">LOGOUT</li>
-                </a>
-                <a href="main.php">
-                    <li class="mdl-menu__item">PROFILE</li>
+                <a href="index.php">
+                    <li class="mdl-menu__item">BACK</li>
                 </a>
             </ul>
         </div>
